@@ -57,7 +57,8 @@
     border: 2px solid transparent ;
     border-radius: 10px;
     background-color: rgb(221, 213, 184);
-    font-size: 25px;}
+    font-size: 25px;
+color: white;}
 .SatzZufall:hover{ 
     background-color: rgb(188, 173, 109);}
 
@@ -143,6 +144,10 @@ hr{
     width: 90%;
     border-color: rgb(188, 173, 109);}
 
+button{
+    outline: none;
+}
+
 #meldung{
     display: none;
     position: fixed;
@@ -219,7 +224,6 @@ hr{
 
 <p style="margin-left: 20px; font-size: 65px; color: rgb(188, 173, 109); font-family: 'Courier New'" id="Willkommen"></p> 
 </div>
-<br>
 <div class="textContainer">
 <p style="font-size: 50px; color: rgb(188, 173, 109);"  id="Satz"></p>
 </div>
@@ -235,6 +239,7 @@ hr{
     <br><br> Unsere Klasse besteht aus kreativen Köpfen 🎨, engagierten Lernenden 📚 und starken Teamplayern 🤝, die sich gegenseitig unterstützen, um gemeinsam ihre Ziele zu erreichen. 🚀
     <br><br> Zusammen sind wir unschlagbar! 💪
 </div>
+<br><br><br>
 <hr>
 
 
@@ -252,7 +257,7 @@ let slideInterval;
 const Schueler= ["Fr. Wacker", "Frau Wacker", "Katherin", "Wacker", "Katherin Wacker", "Messner", "Martin", "Herr Messner", "Marin Messner", "Hr. Messner", "Herr Malenoff", "Herr Tiede", "Frau Schwiewagner", "Herr Troll", "Herr Hirschman", "Frau Malcherek",
 "metin","Chiara","Juan","Robin","Daniel","Louisa","Julian","Marie","Hanan","Maalik","Pauline","Greta","Georgios","Alexander","Felix","Lisa","Lorenz","Leonard","Silas","Stella","Francesco","Nikolas","Luca","Kwame","Leya","Luzie"]
 let html = document.getElementById("Klasse11W6");
-const Saetze = ["Ich hoffe es geht dir gut :)", "Hinweis: Wer Gänsehaut, schlägt auch Enten :(", "Ich wünsche dir ne schöne Woche", "hahaha, hey schön das du da bist... HOLT MICH HIER RAUS", "Hinweis: Ich werde nicht bezahlt, hilfe", "Hinweis: 8 Stunden schlaft tut gut", "Hinweis: Ich schlafe nicht und bin Kühlschrank wie ein frisch ... eh?", "Warum liegt hier Stroh?", "Messi auf die 1", "Cristiano auf die 1", "Hinweis: 1/2 Ente + 1/2 Ente = 1 Ganz","Hinweis: Sei im Unterricht aufmerksam", "Hinweis: 1 + 1 = 11", "Welche Zeitform ist: Der Busfahrer war pünktlich gewesen.? Bus-quam-Perfekt"]
+const Saetze = ["Ich hoffe es geht dir gut :)", "Hinweis: Wer Gänsehaut, schlägt auch Enten :(", "Ich wünsche dir ne schöne Woche", "hahaha, hey schön das du da bist... HOLT MICH HIER RAUS", "Hinweis: Ich werde nicht bezahlt, hilfe", "Hinweis: 8 Stunden schlaft tut gut", "Hinweis: Ich schlafe nicht und bin Kühlschrank wie ein frisch ... eh?", "Warum liegt hier Stroh?", "Messi auf die 1", "Cristiano auf die 1", "Hinweis: 1/2 Ente + 1/2 Ente = 1 Ganz","Hinweis: Sei im Unterricht aufmerksam", "Hinweis: 1 + 1 = 11", "Welche Zeitform ist: Der Busfahrer war pünktlich gewesen.? Bus-quam-Perfekt","Hinweis: EIn Tag ohne Lächeln ist ein verlorener Tag","Was ist orange und läuft durch den Wald? Eine Wanderine!","Hinweis: Auf dem Stundenplan steht heute kein Unterricht, sondern einfach nur Fun!","Wenn du volljährig bist und dir das Leben Zitronen gibt, frag nach Salz und Tequila.","Ich kann dir alles erklären – aber nicht die Mathehausaufgaben!","Bist du die Skyline meiner Stadt? Denn du lässt mein Herz höher schlagen!","Bist du etwa ein Quadrat in meiner linearen Gleichung, oder warum fühle ich mich ohne dich so irrational?🧐🍷","Wenn ich deine Hardware sehe, wird meine Software kalt","ALL I WANT FOR CHRISTMAS IS YOU 🎶S"]
 let SatzRandom = ""
 
 function showSlides() {
