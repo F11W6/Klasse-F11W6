@@ -52,12 +52,10 @@
     .Hauptbild {
         width: 100%;
         height: auto;}
-    h1, h2 {
-        font-size: 20px;}
-    a{ font-size: 15px;}
+    h1 {
+        font-size: 24px;}
     .vor, .nach {
         display: none;}}
-
 
 .vor, .nach {
     cursor: pointer;
@@ -164,68 +162,21 @@ hr{
     cursor: pointer;
     float: right;}
 
-.menu-toggle {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-    padding: 10px;
-    background-color: rgb(188, 173, 109);
-    left: 0px;}
-
-
-#menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(221, 213, 184);
-}
-
-#menu li {
-    display: block;
-    text-align: center;
-    padding: 10px 0;
-}
-
-.hidden {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    #menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    #menu li {
-        display: block;
-        border-top: 1px solid rgb(188, 173, 109);
-    }
-}
-
 
 </style>
 
 
 <body>
 
-    <div class="menu-toggle" onclick="toggleMenu()">
-        &#9776;
-    </div>
-    <ul id="menu" class="hidden">
-        <li><a class="aktiv" href="https://artichero.github.io/Klasse-F11W6/"><img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"></a></li>
-        <li><a href="Klasse F11W6-Schüler.html">Schüler</a></li>
-        <li><a href="Klasse F11W6-Klassenfotos.html">Klassenfotos</a></li>
-        <li><a href="Klasse F11W6-Ausflüge.html">Ausflüge</a></li>
-        <li><a href="Klasse F11W6-Andere.html">Andere</a></li>
-        <li><a id="ausloggenB">Ausloggen</a></li>
-    </ul>
-    
+<ul onmouseover="">
+    <li> <a class="aktiv" href="http://localhost/JuanPraktikum/Klasse/Klasse%20F11W6.html"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
+    <li> <a href="http://localhost/JuanPraktikum/Klasse/Klasse%20F11W6-Sch%c3%bcler.html">Sch&uuml;ler</a></li>
+    <li> <a href="http://localhost/JuanPraktikum/Klasse/Klasse%20F11W6-Klassenfotos.html">Klassenfotos</a></li>
+    <li> <a href="http://localhost/JuanPraktikum/Klasse/Klasse%20F11W6-Ausfl%c3%bcge.html">Ausfl&uuml;ge</a> </li>
+    <li> <a href="http://localhost/JuanPraktikum/Klasse/Klasse%20F11W6-Andere.html">Andere</a></li>
+    <li> <a id="ausloggenB"> Ausloggen </a></li>
+</ul>
+
 <div class="slideContainer">
 
     <div class="slideshow fade">
@@ -351,24 +302,12 @@ function ausloggen(){
 document.getElementById("ausloggenB").addEventListener('click', function(){ausloggen();});
 
 
-
 sessionStorage.SeiteLaden = (parseInt(sessionStorage.SeiteLaden) || 0) + 1
 
 if (sessionStorage.SeiteLaden > 5){
     document.getElementById('Meldung').style.display = "block"}
 
     document.getElementById('Schließen').addEventListener('click', function(){document.getElementById('Meldung').style.display = "none"});
-
-    function toggleMenu() {
-    const menu = document.getElementById("menu");
-    if (menu.classList.contains("hidden")) {
-        menu.classList.remove("hidden");
-        menu.style.display = "block";
-    } else {
-        menu.classList.add("hidden");
-        menu.style.display = "none";
-    }
-}
 
 
 </script>
