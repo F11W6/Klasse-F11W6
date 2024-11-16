@@ -29,6 +29,34 @@
     margin-left: auto;
     margin-right: auto;
     position: relative;}
+.vor, .nach {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: rgb(188, 173, 109);
+    border-radius: 3px;
+    font-size: 18px;
+    user-select: none;
+    transform: translateY(-50%);}
+.vor {
+    left: 10px;}
+.nach {
+    right: 10px;}
+.vor:hover, .nach:hover {
+    background-color: rgb(81, 82, 83)}
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;}
+.inline-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+.SatzZufall{
+    border-radius: 10px;
+    background-color: rgb(221, 213, 184);
+}
 
 @media (max-width: 1200px) {
     .slideContainer, .textContainer {
@@ -61,35 +89,9 @@
     .vor, .nach {
         display: none;}}
 
-.vor, .nach {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    color: rgb(188, 173, 109);
-    border-radius: 3px;
-    font-size: 18px;
-    user-select: none;
-    transform: translateY(-50%);}
-.vor {
-    left: 10px;}
-.nach {
-    right: 10px;}
-.vor:hover, .nach:hover {
-    background-color: rgb(81, 82, 83)}
-.fade {
-    animation-name: fade;
-    animation-duration: 2s;}
-
 @keyframes fade {
     from {opacity: 0;}
     to {opacity: 1;}}
-
-.inline-container {
-    display: flex;
-    align-items: center;
-    justify-content: center; }
 
 
 html,body{
@@ -218,26 +220,34 @@ hr{
 <div class="textContainer">
 <p style="font-size: 50px; color: rgb(188, 173, 109);"  id="Satz"></p>
 </div>
+<button class="">Zufälliger Satz</button>
 
 <br><br>
 <hr>
+<br><br>
 
-<h2> Wer sind wir?</h2>
+<h2 style="color: rgb(188, 173, 109); text-align: center;">Wer sind wir?</h2>
 <div class="textContainer">
-<br> Wir sind die Klasse F11W6, eine bunte und dynamische Gruppe von Sch&uuml;lerinnen und Sch&uuml;lern. 
-<br>
-<br>Unsere Klasse besteht aus kreativen K&ouml;pfen, engagierten Lernenden und starken Teamplayern, die sich gegenseitig unterst&uuml;tzen, um gemeinsam ihre Ziele zu erreichen.
-<br>
+    <br> Wir sind die Klasse F11W6, eine bunte und dynamische Gruppe von <span style="color:rgb(221, 213, 184)">Schülerinnen</span> und <span style="color: rgb(221, 213, 184);">Schülern</span> 🌟.
+    <br><br> Unsere Klasse besteht aus kreativen Köpfen 🎨, engagierten Lernenden 📚 und starken Teamplayern 🤝, die sich gegenseitig unterstützen, um gemeinsam ihre Ziele zu erreichen. 🚀
+    <br><br> Zusammen sind wir unschlagbar! 💪
 </div>
 
+<div style="padding-top: 100px; padding-bottom: 100px;"> </div>
+<img src="Bilder F11W6/Bau.png" alt="Arbeiten" style="width: 30%; height: 50%;">
+<br><br>
+<div>bald was neues!</div>
+
 <div class="platzmacher"></div>
+
 
 <div id="Meldung">
     <button id="Schließen"> x </button>
 </div>
 <footer>
-    <p style="color: white;">Berufliche Oberschule Unterschlei&szlig;heim | S&uuml;dliche Ingolst&auml;dter Stra&szlig;e 1 | 85716 Unterschlei&szlig;heim | Tel: 089 316056880 | E-Mail: sekretariat@fosbos-ush.de </p>
+    <p style="color: white;">Berufliche Oberschule Unterschleißheim | Südliche Ingolstädter Straße 1 | 85716 Unterschleißheim | Tel: 089 316056880 | E-Mail: sekretariat@fosbos-ush.de </p>
 </footer>
+
 
 <script>
 let slideIndex = 0;
