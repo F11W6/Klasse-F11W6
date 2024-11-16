@@ -54,9 +54,12 @@
     align-items: center;
     justify-content: center;}
 .SatzZufall{
+    border: 2px solid transparent ;
     border-radius: 10px;
     background-color: rgb(221, 213, 184);
-}
+    font-size: 25px;}
+.SatzZufall:hover{ 
+    background-color: rgb(188, 173, 109);}
 
 @media (max-width: 1200px) {
     .slideContainer, .textContainer {
@@ -220,7 +223,7 @@ hr{
 <div class="textContainer">
 <p style="font-size: 50px; color: rgb(188, 173, 109);"  id="Satz"></p>
 </div>
-<button class="">Zufälliger Satz</button>
+<button class="SatzZufall" id="SatzZufall">Zufälliger Satz</button>
 
 <br><br>
 <hr>
@@ -232,13 +235,7 @@ hr{
     <br><br> Unsere Klasse besteht aus kreativen Köpfen 🎨, engagierten Lernenden 📚 und starken Teamplayern 🤝, die sich gegenseitig unterstützen, um gemeinsam ihre Ziele zu erreichen. 🚀
     <br><br> Zusammen sind wir unschlagbar! 💪
 </div>
-
-<div style="padding-top: 100px; padding-bottom: 100px;"> </div>
-<img src="Bilder F11W6/Bau.png" alt="Arbeiten" style="width: 30%; height: 50%;">
-<br><br>
-<div>bald was neues!</div>
-
-<div class="platzmacher"></div>
+<hr>
 
 
 <div id="Meldung">
@@ -314,6 +311,10 @@ function ausloggen(){
     location.reload()}
 
 document.getElementById("ausloggenB").addEventListener('click', function(){ausloggen();});
+document.getElementById("SatzZufall").addEventListener("click", function(){SatzHallo(); AnderSatz();})
+
+function AnderSatz(){
+    document.getElementById("Satz").textContent = SatzRandom}
 
 
 sessionStorage.SeiteLaden = (parseInt(sessionStorage.SeiteLaden) || 0) + 1
