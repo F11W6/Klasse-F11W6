@@ -301,15 +301,7 @@ function ausloggen(){
 
 document.getElementById("ausloggenB").addEventListener('click', function(){ausloggen();});
 
-function blockMobileAccess() {
-    const userAgent = navigator.userAgent.toLowerCase();
-    const isMobile = /iphone|ipod|ipad|android/i.test(userAgent);
-    if (isMobile) {
-        document.body.innerHTML = "<h1>Zugriff verweigert</h1><p>Der Zugriff auf diese Seite ist auf mobilen Geraeten noch nicht erlaubt, wir arbeiten daran :) .</p>";
-        return false;}
-    return true;}
 
-if (!blockMobileAccess()){}
 
 sessionStorage.SeiteLaden = (parseInt(sessionStorage.SeiteLaden) || 0) + 1
 
