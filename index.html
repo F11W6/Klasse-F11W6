@@ -41,9 +41,13 @@
         padding-top: 100px;
         padding-bottom: 100px;}
     .slideContainer, .textContainer {
-        width: 100%;}
+        width: 100%;
+        margin: 0 auto;}
     h1, h2 {
-        font-size: 24px;}}
+        font-size: 24px;}
+    footer{
+        max-width: 80%;
+        font-size: 15px}}
 
 @media (max-width: 480px) {
     .logoFW6 {
@@ -239,9 +243,9 @@ hr{
 let slideIndex = 0;
 let slideInterval;
 const Schueler= ["Fr. Wacker", "Frau Wacker", "Katherin", "Wacker", "Katherin Wacker", "Messner", "Martin", "Herr Messner", "Marin Messner", "Hr. Messner", "Herr Malenoff", "Herr Tiede", "Frau Schwiewagner", "Herr Troll", "Herr Hirschman", "Frau Malcherek",
-"Juan", "Chiara", "Metin", "Luca", "Francesco", "Pauline", "Leya", "Lorenz", ]
+"metin","Chiara","Juan","Robin","Daniel","Louisa","Julian","Marie","Hanan","Maalik","Pauline","Greta","Georgios","Alexander","Felix","Lisa","Lorenz","Leonard","Silas","Stella","Francesco","Nikolas","Luca","Kwame","Leya","Luzie"]
 let html = document.getElementById("Klasse11W6");
-const Saetze = ["Ich hoffe es geht dir gut :)", "Hinweis: Wer Gänsehaut, schlägt auch Enten :(", "Ich wünsche dir ne schöne Woche", "hahaha, hey schön das du da bist... HOLT MICH HIER RAUS", "Hinweis: Ich werde nicht bezahlt, hilfe", "Hinweis: 8 Stunden schlaft tut gut", "Hinweis: Ich schlafe nicht und bin Kühlschrank wie ein frisch ... eh?", "Warum liegt hier Stroh?", "Messi auf die 1", "Cristiano auf die 1", "Hinweis: 1/2 Ente + 1/2 Ente = 1 Ganz","Hinweis: Sei im Unterricht aufmerksam", "Hinweis: 1 + 1 = 11", "Welche Zeitform ist: Der Busfahrer war pünktlich gewesen. Bus-quam-Perfekt"]
+const Saetze = ["Ich hoffe es geht dir gut :)", "Hinweis: Wer Gänsehaut, schlägt auch Enten :(", "Ich wünsche dir ne schöne Woche", "hahaha, hey schön das du da bist... HOLT MICH HIER RAUS", "Hinweis: Ich werde nicht bezahlt, hilfe", "Hinweis: 8 Stunden schlaft tut gut", "Hinweis: Ich schlafe nicht und bin Kühlschrank wie ein frisch ... eh?", "Warum liegt hier Stroh?", "Messi auf die 1", "Cristiano auf die 1", "Hinweis: 1/2 Ente + 1/2 Ente = 1 Ganz","Hinweis: Sei im Unterricht aufmerksam", "Hinweis: 1 + 1 = 11", "Welche Zeitform ist: Der Busfahrer war pünktlich gewesen.? Bus-quam-Perfekt"]
 let SatzRandom = ""
 
 function showSlides() {
