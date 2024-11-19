@@ -46,6 +46,39 @@
     width: 450px; 
     height: 350px;}
 
+    @media (max-width: 1200px) {
+    .slideContainer, .textContainer {
+        width: 90%;}
+    h1, h2 {
+        font-size: 30px;}}
+
+@media (max-width: 768px) {
+    .platzmacher {
+        padding-top: 100px;
+        padding-bottom: 100px;}
+    .slideContainer{
+        width: 100%}
+    .textContainer, .slideContainer{
+        margin: 0 auto;}
+    h1, h2 {
+        font-size: 24px;}
+    footer{
+        width: 80%;
+        font-size: 15px}}
+
+@media (max-width: 480px) {
+    .logoFW6 {
+        width: 50px;
+        height: 25px;}
+    .Hauptbild {
+        width: 100%;
+        height: auto;}
+    h1 {
+        font-size: 24px;}
+    .vor, .nach {
+        display: none;}}
+
+
 
 html,body{
 overflow-x: hidden;}
@@ -80,10 +113,11 @@ img{vertical-align: middle;}
 
 footer{
     background-color: rgb(188, 173, 109); 
-    padding: 20px; 
+    padding: 5px; 
     width: 100%; 
     font-size: 20px;
-    position: block;}
+    position: absolute;}
+
 
 hr{margin-top: 1px;}
 
@@ -108,19 +142,19 @@ button{
     box-sizing: border-box;
     z-index: 1;}
 
-button:hover{ border: none ;background-color: rgb(188, 173, 109);}
+button:hover{
+    border: none ;background-color: rgb(188, 173, 109);}
 
 </style>
 
 <body>
 
-<ul>
-    <li> <a href="http://localhost/JuanPraktikum/Klasse/Klasse%20F11W6.html"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
-    <li> <a href="http://localhost/JuanPraktikum/Klasse/Klasse%20F11W6-Sch%c3%bcler.html">Sch&uuml;ler</a></li>
-    <li> <a href="http://localhost/JuanPraktikum/Klasse/Klasse%20F11W6-Klassenfotos.html">Klassenfotos</a></li>
-    <li> <a class="aktiv" href="http://localhost/JuanPraktikum/Klasse/Klasse%20F11W6-Ausfl%c3%bcge.html">Ausfl&uuml;ge</a> </li>
-    <li> <a href="http://localhost/JuanPraktikum/Klasse/Klasse%20F11W6-Andere.html"> Andere</a></li>
-</ul>
+<ul onmouseover="">
+    <li> <a href="https://artichero.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
+    <li> <a href="Klasse F11W6-Schüler.html">Sch&uuml;ler</a></li>
+    <li> <a href="Klasse F11W6-Klassenfotos.html">Klassenfotos</a></li>
+    <li> <a class="aktiv" href="Klasse F11W6-Ausflüge.html">Ausfl&uuml;ge</a> </li>
+    <li> <a href="Klasse F11W6-Andere.html">Andere</a></li></ul>
 <br>
 <br>
 <br>
@@ -149,7 +183,7 @@ button:hover{ border: none ;background-color: rgb(188, 173, 109);}
 
 <p class="infoText" id="Info6">-Juan.</p>
 
-<button id="Weiter" style="visibility: hidden;"> weiter </button>
+<button id="Weiter" style="visibility: hidden; outline: none"> weiter </button>
 
 
 
@@ -161,9 +195,8 @@ button:hover{ border: none ;background-color: rgb(188, 173, 109);}
 
 
 
-
 <footer>
-    <p style="margin:1px; padding: 2px; color: white;">Berufliche Oberschule Unterschlei&szlig;heim . S&uuml;dliche Ingolst&auml;dter Stra&szlig;e 1 . 85716 Unterschlei&szlig;heim . Tel: 089. 3 16 05 68 80 . E-Mail: sekretariat@fosbos-ush.de </p>
+    <p style="color: white; outline: none;">Berufliche Oberschule Unterschleißheim | Südliche Ingolstädter Straße 1 | 85716 Unterschleißheim | Tel: 089 316056880 | E-Mail: sekretariat@fosbos-ush.de </p>
 </footer>
 
 <script>
@@ -241,6 +274,3 @@ document.getElementById("Weiter").addEventListener('click', function(){weitergeh
 
 </body>
 </html>
-</body>
-</html>
-
