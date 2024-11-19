@@ -22,7 +22,7 @@
     display: none;}
 .textContainer {
     width: 55%;
-    text-align: justify}
+    text-align: justify;}
 .slideContainer {
         width: 80%;}
 .slideContainer, .textContainer {
@@ -65,7 +65,7 @@ color: white;}
 
 @media (max-width: 1200px) {
     .slideContainer, .textContainer {
-        width: 80%;}
+        width: 90%;}
     h1, h2 {
         font-size: 30px;}}
 
@@ -73,13 +73,12 @@ color: white;}
     .platzmacher {
         padding-top: 100px;
         padding-bottom: 100px;}
-    .slideContainer, .textContainer {
-        width: 100%;
+    .slideContainer{
+        width: 100%}
+    .textContainer, .slideContainer{
         margin: 0 auto;}
     h1, h2 {
         font-size: 24px;}
-    li a{ 
-    padding: 10px 12px;}
     footer{
         width: 80%;
         font-size: 15px}}
@@ -185,7 +184,7 @@ button{
 
 <body>
 
-<ul onmouseover="" style="width:110%">
+<ul onmouseover="">
     <li> <a class="aktiv" href="https://artichero.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
     <li> <a href="Klasse F11W6-Schüler.html">Sch&uuml;ler</a></li>
     <li> <a href="Klasse F11W6-Klassenfotos.html">Klassenfotos</a></li>
@@ -228,7 +227,7 @@ button{
 <p style="margin-left: 20px; font-size: 65px; color: rgb(188, 173, 109); font-family: 'Courier New'" id="Willkommen"></p> 
 </div>
 <div class="textContainer">
-<p style="font-size: 50px; color: rgb(188, 173, 109); text-align: center"  id="Satz"></p>
+<p style="font-size: 50px; color: rgb(188, 173, 109);"  id="Satz"></p>
 </div>
 <button class="SatzZufall" id="SatzZufall">Zufälliger Satz</button>
 
@@ -250,9 +249,7 @@ button{
     <button id="Schließen"> x </button>
 </div>
 <footer>
-    <div style="width:85%; margin:0 auto">
     <p style="color: white; outline: none;">Berufliche Oberschule Unterschleißheim | Südliche Ingolstädter Straße 1 | 85716 Unterschleißheim | Tel: 089 316056880 | E-Mail: sekretariat@fosbos-ush.de </p>
-    </div>
 </footer>
 
 
@@ -263,7 +260,7 @@ let slideInterval;
 const Schueler= ["Fr. Wacker", "Frau Wacker", "Katherin", "Wacker", "Katherin Wacker", "Messner", "Martin", "Herr Messner", "Marin Messner", "Hr. Messner", "Herr Malenoff", "Herr Tiede", "Frau Schwiewagner", "Herr Troll", "Herr Hirschman", "Frau Malcherek",
 "metin","Chiara","Juan","Robin","Daniel","Louisa","Julian","Marie","Hanan","Maalik","Pauline","Greta","Georgios","Alexander","Felix","Lisa","Lorenz","Leonard","Silas","Stella","Francesco","Nikolas","Luca","Kwame","Leya","Luzie"]
 let html = document.getElementById("Klasse11W6");
-const Saetze = ["Ich hoffe es geht dir gut :)", "Hinweis: Wer Gänsehaut, schlägt auch Enten :(", "Ich wünsche dir ne schöne Woche", "hahaha, hey schön das du da bist... HOLT MICH HIER RAUS", "Hinweis: Ich werde nicht bezahlt, hilfe", "Hinweis: 8 Stunden schlaft tut gut", "Hinweis: Ich schlafe nicht und bin Kühlschrank wie ein frisch ... eh?", "Warum liegt hier Stroh?", "Messi auf die 1", "Cristiano auf die 1", "Hinweis: 1/2 Ente + 1/2 Ente = 1 Ganz","Hinweis: Sei im Unterricht aufmerksam", "Hinweis: 1 + 1 = 11", "Welche Zeitform ist: Der Busfahrer war pünktlich gewesen.? Bus-quam-Perfekt","Hinweis: Ein Tag ohne Lächeln ist ein verlorener Tag","Was ist orange und läuft durch den Wald? Eine Wanderine! hahaha...","Hinweis: Auf dem Stundenplan steht heute kein Unterricht, sondern einfach nur Fun!","Wenn du volljährig bist und dir das Leben Zitronen gibt, frag nach Salz und Tequila.","Ich kann dir alles erklären, aber nicht die Mathehausaufgaben!","Bist du die Skyline meiner Stadt? Denn du lässt mein Herz höher schlagen!","Bist du etwa ein Quadrat in meiner linearen Gleichung, oder warum fühle ich mich ohne dich so irrational?🧐🍷","Wenn ich deine Hardware sehe, wird meine Software kalt","ALL I WANT FOR CHRISTMAS IS YOU 🎶","Entschuldige die schlechten Witze, aber das Budget ist leider nicht ausreichend...","Hinweis: KIs werden nicht bezahlt :(","01001100 01101001 01100101 01100010 01100101"]
+const Saetze = ["Ich hoffe es geht dir gut :)", "Hinweis: Wer Gänsehaut, schlägt auch Enten :(", "Ich wünsche dir ne schöne Woche", "hahaha, hey schön das du da bist... HOLT MICH HIER RAUS", "Hinweis: Ich werde nicht bezahlt, hilfe", "Hinweis: 8 Stunden schlaft tut gut", "Ich schlafe nicht und bin Kühlschrank wie ein frisch ... eh?", "Warum liegt hier Stroh?", "Messi auf die 1", "Cristiano auf die 1", "Hinweis: 1/2 Ente + 1/2 Ente = 1 Ganz","Hinweis: Sei im Unterricht aufmerksam", "Hinweis: 1 + 1 = 11", "Welche Zeitform ist: Der Busfahrer war pünktlich gewesen.? Bus-quam-Perfekt","Hinweis: EIn Tag ohne Lächeln ist ein verlorener Tag","Was ist orange und läuft durch den Wald? Eine Wanderine! hahaha...","Hinweis: Auf dem Stundenplan steht heute kein Unterricht, sondern einfach nur Fun!","Wenn du volljährig bist und dir das Leben Zitronen gibt, frag nach Salz und Tequila.","Ich kann dir alles erklären, aber nicht die Mathehausaufgaben!","Bist du die Skyline meiner Stadt? Denn du lässt mein Herz höher schlagen!","Bist du etwa ein Quadrat in meiner linearen Gleichung, oder warum fühle ich mich ohne dich so irrational?🧐🍷","Wenn ich deine Hardware sehe, wird meine Software kalt","ALL I WANT FOR CHRISTMAS IS YOU 🎶","Entschuldige die schlechten Witze, aber das Budget ist leider nicht ausreichend...","Hinweis: KIs werden nicht bezahlt :(",]
 let SatzRandom = ""
 
 function showSlides() {
