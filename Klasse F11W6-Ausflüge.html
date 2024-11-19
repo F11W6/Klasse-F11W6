@@ -1,29 +1,55 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <title>Klasse F11W6 Klassenfotos</title>
+    <title>Klasse F11W6 Ausfl&uuml;ge</title>
     <link rel="icon" href="Bilder/F11W6.png">
 </head>
 <style>
+.platzmacher{
+    padding-top: 200px;
+    padding-bottom: 200px;}
 
 .logoFW6{
     width: 65px; 
     height: 31px;}
 .Hauptbild{
     height: 650px; 
-    width: 1000px;
-    }
+    width: 1000px;}
 .aktiv{
     background-color:
     rgb(188, 173, 109);}
 
-.fade{
-    animation-name: fade;
-    animation-duration: 1s;}
-    
+.Karte{
+    border: 0;
+    display: flex;
+    justify-content: flex-start; 
+    margin-left: 200px;}
+
+
+.infoText{
+    font-family: "Lucida Console";
+    font-size: 19px; 
+    text-align: justify; 
+    width: 300px; 
+    height: 400px;
+    position: absolute;
+    top: 430px;
+    left: 980px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .2s ease-in;}
+
+.Notizbuch{ 
+    position: absolute;
+    top: 375px;
+    left: 905px; 
+    width: 450px; 
+    height: 350px;}
+
 
 html,body{
-    overflow-x: hidden;}
+overflow-x: hidden;}
+
 h1,h2,h3,h4,h5,h6{
     font-size: 45px;}
 body{
@@ -54,42 +80,84 @@ img{vertical-align: middle;}
 
 footer{
     background-color: rgb(188, 173, 109); 
-    padding: 5px; 
+    padding: 20px; 
     width: 100%; 
     font-size: 20px;
-    position: absolute;}
+    position: block;}
 
-hr{
-    margin-top: 100px;}
+hr{margin-top: 1px;}
 
-table{margin: 0px 100px 200px 100px
-}
+table{margin: 0px 100px 200px 100px;
+    display: block; position: relative;}
+
+p{color:black}
+
+button{
+    height: 60px;
+    width: 170px;
+    font-size: 35px;
+    color: rgb(255, 255, 255); 
+    background-color: rgb(221, 213, 184); 
+    border: none ;
+    border-radius: 5px;
+    position: absolute;
+    left: 1150px;
+    text-align: center;
+    top: 720px;
+    cursor: pointer;
+    box-sizing: border-box;
+    z-index: 1;}
+
+button:hover{ border: none ;background-color: rgb(188, 173, 109);}
 
 </style>
 
 <body>
 
 <ul>
-    <li> <a href="https://artichero.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
-    <li> <a href="Klasse F11W6.html">Sch&uuml;ler</a></li>
-    <li> <a href="Klasse F11W6-Klassenfotos.html">Klassenfotos</a></li>
-    <li> <a class="aktiv" href="Klasse F11W6-Ausflüge.html">Ausfl&uuml;ge</a> </li>
-    <li> <a href="Klasse F11W6-Andere.html">Andere</a></li>
-    <li> <a id="ausloggenB"> Ausloggen </a></li>
+    <li> <a href="http://localhost/JuanPraktikum/Klasse/Klasse%20F11W6.html"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
+    <li> <a href="http://localhost/JuanPraktikum/Klasse/Klasse%20F11W6-Sch%c3%bcler.html">Sch&uuml;ler</a></li>
+    <li> <a href="http://localhost/JuanPraktikum/Klasse/Klasse%20F11W6-Klassenfotos.html">Klassenfotos</a></li>
+    <li> <a class="aktiv" href="http://localhost/JuanPraktikum/Klasse/Klasse%20F11W6-Ausfl%c3%bcge.html">Ausfl&uuml;ge</a> </li>
+    <li> <a href="http://localhost/JuanPraktikum/Klasse/Klasse%20F11W6-Andere.html"> Andere</a></li>
 </ul>
+<br>
+<br>
+<br>
+<h1>Ausfl&uuml;ge 2024/2025</h1>
+<br>
+<br>
+<img class="Notizbuch" id= "Notizbuch" src="Bilder F11W6/Notizbuch2.png" alt="Notizbuch" style="visibility: hidden;">
 
-<h1>Ausflüge 2024/2025</h1>
 
-<br>
-<br>
-<Table>
-<img src="Bilder F11W6/Bau.png" alt="nicht fertig">
-<p>WIR ARBEITEN NOCH DARAN :)</p>
-</Table>
-<br>
-<br>
-<br>
-<br>
+<img id="Bildkarte" class="Karte" src="Bilder F11W6/Ausfluege-removebg-preview.png" usemap="#image-map">
+
+<map name="image-map">
+    <area id="Schliersee" target="" alt="23.09.2024 - Schliersee" title="23.09.2024 - Schliersee" coords="284,421,288,411,284,404,279,407,277,412,280,418" shape="poly">
+</map>
+
+
+<p class="infoText" id="Info1">  Am 23.09.2024 starteten wir um 9:28 Uhr, obwohl viele Sch&uuml;ler aufgrund von Problemen mit der S-Bahn versp&auml;tet eintrafen. Wir trafen uns schlie&szlig;lich mit der Klasse F11W4 an der Donnersberger Br&uuml;cke. Nach etwa 50 Minuten erreichten wir die Bahnstation in Schliersee. </p>
+
+<p class="infoText" id="Info2"> Kurz darauf machten wir uns auf den Weg in Richtung Schliersbergalm. Der Weg war anstrengend, und deshalb blieben einige Sch&uuml;ler hinten. Andere verwirrten sich und nahmen falsche Wege, aber letztlich kamen alle gut an.</p>
+
+<p class="infoText" id="Info3"> Oben angekommen, spielten einige, andere a&szlig;en, genossen die Sonne oder widmeten sich ihren Hobbys.
+    
+<p class="infoText" id="Info4">Als es Zeit war, den Berg hinunterzugehen, teilte sich die Klasse F11W6 in zwei Gruppen auf: Einige fuhren mit der Seilbahn nach unten, w&auml;hrend die anderen mit der Rodelbahn mit hoher Geschwindigkeit den Berg hinab sausten. Manche st&uuml;rzten oder jagten sich, wobei einige aus der Bahn flogen.</p>
+    
+<p class="infoText" id="Info5">Es war ein Wandertag, der f&uuml;r viele unvergesslich bleiben wird und die Beziehung zwischen den Mitsch&uuml;lern weiter st&auml;rkte.</p>
+
+<p class="infoText" id="Info6">-Juan.</p>
+
+<button id="Weiter" style="visibility: hidden;"> weiter </button>
+
+
+
+
+<div class="platzmacher"></div>
+
+
+
 
 
 
@@ -97,6 +165,82 @@ table{margin: 0px 100px 200px 100px
 <footer>
     <p style="margin:1px; padding: 2px; color: white;">Berufliche Oberschule Unterschlei&szlig;heim . S&uuml;dliche Ingolst&auml;dter Stra&szlig;e 1 . 85716 Unterschlei&szlig;heim . Tel: 089. 3 16 05 68 80 . E-Mail: sekretariat@fosbos-ush.de </p>
 </footer>
+
+<script>
+
+let currentText = 0;
+
+
+function Erscheinen(){
+    let infoDiv1 = document.getElementById("Info1");
+    let infoDiv2 = document.getElementById("Info2");
+    let infoDiv3 = document.getElementById("Info3");
+    let infoDiv4 = document.getElementById("Info4");
+    let infoDiv5 = document.getElementById("Info5");
+    let infoDiv6 = document.getElementById("Info6");
+    let notizbuchImg = document.getElementById("Notizbuch");
+    let WeiterButton = document.getElementById("Weiter");
+
+    if (infoDiv1.style.opacity=== "1" || notizbuchImg.style.visibility ==="visible"){
+        infoDiv1.style.opacity= "0";
+        infoDiv2.style.opacity= "0";
+        infoDiv3.style.opacity= "0";
+        infoDiv4.style.opacity= "0";
+        infoDiv5.style.opacity= "0";
+        infoDiv6.style.opacity= "0";
+        notizbuchImg.style.visibility = "hidden"
+        WeiterButton.style.visibility = "hidden"; }
+    else{
+        infoDiv1.style.opacity= "1";
+        infoDiv2.style.opacity= "0";
+        infoDiv3.style.opacity= "0";
+        infoDiv4.style.opacity= "0";
+        infoDiv5.style.opacity= "0";
+        infoDiv6.style.opacity= "0";
+        notizbuchImg.style.visibility = "visible"
+        WeiterButton.style.visibility = "visible"}}
+
+document.getElementById("Schliersee").addEventListener('click', function(){ Erscheinen();});
+
+
+function weitergehts(){ 
+    document.getElementById("Info1").style.opacity = "0";
+    document.getElementById("Info2").style.opacity = "0";
+    document.getElementById("Info3").style.opacity = "0";
+    document.getElementById("Info4").style.opacity = "0";
+    document.getElementById("Info5").style.opacity = "0";
+    document.getElementById("Info6").style.opacity = "0";
+
+
+    currentText++
+
+    if (currentText > 5){currentText = 0}
+
+    switch (currentText){
+    case 0:
+        document.getElementById("Info1").style.opacity = "1"
+        break;
+    case 1:
+        document.getElementById("Info2").style.opacity = "1"
+        break;
+    case 2:
+        document.getElementById("Info3").style.opacity = "1"
+        break;
+    case 3:
+        document.getElementById("Info4").style.opacity = "1"
+        break;
+    case 4:
+        document.getElementById("Info5").style.opacity = "1"
+        break;
+    case 5:
+        document.getElementById("Info6").style.opacity = "1"
+        break;}}
+
+document.getElementById("Weiter").addEventListener('click', function(){weitergehts()})
+</script>
+
+</body>
+</html>
 </body>
 </html>
 
