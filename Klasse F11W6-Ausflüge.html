@@ -18,14 +18,11 @@
 .aktiv{
     background-color:
     rgb(188, 173, 109);}
-
 .Karte{
     border: 0;
     display: flex;
     justify-content: flex-start; 
     margin-left: 200px;}
-
-
 .infoText{
     font-family: "Lucida Console";
     font-size: 19px; 
@@ -34,19 +31,91 @@
     height: 400px;
     position: absolute;
     top: 330px;
-    left: 980px;
+    right: 450px;
     z-index: 1;
     opacity: 0;
     transition: opacity .2s ease-in;}
-
 .Notizbuch{ 
     position: absolute;
     top: 275px;
-    left: 905px; 
+    right: 375px; 
     width: 450px; 
     height: 350px;}
+.ButtonInfoText{
+    height: 60px;
+    width: 170px;
+    font-size: 35px;
+    color: rgb(255, 255, 255); 
+    background-color: rgb(221, 213, 184); 
+    border: none ;
+    border-radius: 5px;
+    position: absolute;
+    right: 410px;
+    text-align: center;
+    top: 615px;
+    cursor: pointer;
+    box-sizing: border-box;
+    z-index: 1;
+    visibility: hidden; 
+    outline: none}
+.mySlides{
+    display: none;}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);}
+.text {
+  color: rgb(188, 173, 109);
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;}
+.numbertext {
+  color: rgb(221, 213, 184);
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;}
+.active, .dot:hover {
+  background-color: #717171;}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;}
 
-    @media (max-width: 1200px) {
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}}
+
+
+@media (max-width: 1200px) {
     .slideContainer, .textContainer {
         width: 90%;}
     h1, h2 {
@@ -77,6 +146,10 @@
         font-size: 24px;}
     .vor, .nach {
         display: none;}}
+
+@keyframes fade{
+  from {opacity: .4} 
+  to {opacity: 1}}
 
 
 
@@ -110,37 +183,23 @@ ul{
     padding: 0px;
     margin: 0px;}
 img{vertical-align: middle;}
-
 footer{
     background-color: rgb(188, 173, 109); 
     padding: 5px; 
     width: 100%; 
     font-size: 20px;
     position: absolute;}
-
-
-hr{margin-top: 1px;}
-
-table{margin: 0px 100px 200px 100px;
+hr{
+    margin-top: 70px;
+    width: 90%;
+    border-color: rgb(188, 173, 109);}
+table{
+    margin: 0px 100px 200px 100px;
     display: block; position: relative;}
+p{
+    color:black}
 
-p{color:black}
 
-button{
-    height: 60px;
-    width: 170px;
-    font-size: 35px;
-    color: rgb(255, 255, 255); 
-    background-color: rgb(221, 213, 184); 
-    border: none ;
-    border-radius: 5px;
-    position: absolute;
-    left: 1150px;
-    text-align: center;
-    top: 615px;
-    cursor: pointer;
-    box-sizing: border-box;
-    z-index: 1;}
 
 button:hover{
     border: none ;background-color: rgb(188, 173, 109);}
@@ -182,10 +241,43 @@ button:hover{
 
 <p class="infoText" id="Info6"></p>
 
-<button id="Weiter" style="visibility: hidden; outline: none"> weiter </button>
+<button id="Weiter" class="ButtonInfoText"> weiter </button>
+<br>
+<hr>
+<br><br><br>
+<h2>Memories</h2>
 
+<br><br>
 
+<div class="slideshow-container">
 
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="Bilder F11W6/Schliersee-Grass.jpg" style="width:100%">
+      <div class="text">Caption Text</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="Bilder F11W6/Schliersee-Baum.jpg" style="width:60%; height: 20%;">
+      <div class="text">Caption Two</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="Bilder F11W6/Schliersee-Himmel.jpg" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+    <br><br>
+<hr>
 
 <div class="platzmacher"></div>
 
@@ -202,6 +294,27 @@ button:hover{
 
 let currentText = 0;
 
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");}
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";}
 
 function Erscheinen(){
     let infoDiv1 = document.getElementById("Info1");
