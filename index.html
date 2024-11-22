@@ -5,6 +5,9 @@
     <link rel="icon" href="Bilder F11W6/F11W6.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
 </head>
+
+
+
 <style>
 
 .platzmacher {
@@ -59,10 +62,33 @@
     border-radius: 10px;
     background-color: rgb(221, 213, 184);
     font-size: 25px;
-color: white;}
+    color: white;}
 .SatzZufall:hover{ 
     background-color: rgb(188, 173, 109);}
+.CookiesBlock{
+    height: auto;
+    width: 17%;
+    z-index: 1;
+    display: block;
+    left: 0px;
+    bottom: 0px;
+    font-size: 12px;
+    border: 2px solid;
+    border-color: rgba(188, 173, 109, 0.9);
+    position: fixed;
+    background-color: rgb(81, 82, 83);
+    animation: slideIn 0.5s ease-out forwards;}
 
+
+#Schließen{    
+    background: none;
+    border: none;
+    color: rgb(188, 173, 109);
+    font-weight: bold;
+    cursor: pointer;
+    float: right;}
+
+    
 @media (max-width: 1200px) {
     .slideContainer, .textContainer {
         width: 80%;}
@@ -74,7 +100,8 @@ color: white;}
         padding-top: 100px;
         padding-bottom: 100px;}
     .slideContainer{
-        width: 100%}
+        width: 100%;
+        top: 30px;}
     .textContainer, .slideContainer{
         margin: 0 auto;}
     h1, h2 {
@@ -147,36 +174,15 @@ hr{
     border-color: rgb(188, 173, 109);}
 
 button{
-    outline: none;
-}
+    outline: none;}
 
-#meldung{
-    display: none;
-    position: fixed;
-    right: 20px; 
-    max-width: 300px;
-    padding:15px;
-    background-color: rgb(81, 82, 83);
-    color: rgb(188, 173, 109);
-    font-size: 14px;
-    font-family: Arial;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: slideIn 0.5s ease-outforwards;}
-
+    
 @keyframes SlideIn {
     from{ transform: translateX(100%);
             opacity: 0;}
     to{transform: translateX(0);
             opacity: 1;}}
 
-#Schließen {
-    background: none;
-    border: none;
-    color: #00796b;
-    font-weight: bold;
-    cursor: pointer;
-    float: right;}
 
 
 </style>
@@ -246,22 +252,26 @@ button{
 <hr>
 
 
-<div id="Meldung">
+<div id="Meldung" class="CookiesBlock">
+    <h3 style="font-size: 15px;">Diese Seite nutzt Cookies</h3>
+    <p style="width: 90%; margin: 0px auto;">Diese Seite speichert nur deinen Namen, damit du dich beim nächsten Mal nicht erneut anmelden musst, es sei denn, du meldest dich ab. Ja, das war's :)</p>
     <button id="Schließen"> x </button>
 </div>
+
+
 <footer>
     <p style="color: white; outline: none;">Berufliche Oberschule Unterschleißheim | Südliche Ingolstädter Straße 1 | 85716 Unterschleißheim | Tel: 089 316056880 | E-Mail: sekretariat@fosbos-ush.de </p>
 </footer>
 
 
-    
+
 <script>
 let slideIndex = 0;
 let slideInterval;
 const Schueler= ["Fr. Wacker", "Frau Wacker", "Katherin", "Wacker", "Katherin Wacker", "Messner", "Martin", "Herr Messner", "Marin Messner", "Hr. Messner", "Herr Malenoff", "Herr Tiede", "Frau Schwiewagner", "Herr Troll", "Herr Hirschman", "Frau Malcherek",
 "Metin","Chiara","Juan","Robin","Daniel","Louisa","Julian","Marie","Hanan","Maalik","Pauline","Greta","Georgios","Alexander","Felix","Lisa","Lorenz","Leonard","Silas","Stella","Francesco","Nikolas","Luca","Kwame","Leya","Luzie"]
 let html = document.getElementById("Klasse11W6");
-const Saetze = ["Ich hoffe es geht dir gut :)", "Hinweis: Wer Gänsehaut, schlägt auch Enten :(", "Ich wünsche dir ne schöne Woche", "hahaha, hey schön das du da bist... HOLT MICH HIER RAUS", "Hinweis: Ich werde nicht bezahlt, hilfe", "Hinweis: 8 Stunden schlaft tut gut", "Ich schlafe nicht und bin Kühlschrank wie ein frisch ... eh?", "Warum liegt hier Stroh?", "Messi auf die 1", "Cristiano auf die 1", "Hinweis: 1/2 Ente + 1/2 Ente = 1 Ganz","Hinweis: Sei im Unterricht aufmerksam", "Hinweis: 1 + 1 = 11", "Welche Zeitform ist: Der Busfahrer war pünktlich gewesen.? Bus-quam-Perfekt","Hinweis: EIn Tag ohne Lächeln ist ein verlorener Tag","Was ist orange und läuft durch den Wald? Eine Wanderine! hahaha...","Hinweis: Auf dem Stundenplan steht heute kein Unterricht, sondern einfach nur Fun!","Wir haben keine Cookies :(","Ich kann dir alles erklären, aber nicht die Mathehausaufgaben!","Bist du die Skyline meiner Stadt? Denn du lässt mein Herz höher schlagen!","Bist du etwa ein Quadrat in meiner linearen Gleichung, oder warum fühle ich mich ohne dich so irrational?🧐🍷","Wenn ich deine Hardware sehe, wird meine Software kalt","ALL I WANT FOR CHRISTMAS IS YOU 🎶","Entschuldige die schlechten Witze, aber das Budget ist leider nicht ausreichend...","Hinweis: KIs werden nicht bezahlt :(",]
+const Saetze = ["Ich hoffe es geht dir gut :)", "Hinweis: Wer Gänsehaut, schlägt auch Enten :(", "Ich wünsche dir ne schöne Woche", "hahaha, hey schön das du da bist... HOLT MICH HIER RAUS", "Hinweis: Ich werde nicht bezahlt, hilfe", "Hinweis: 8 Stunden schlaft tut gut", "Ich schlafe nicht und bin Kühlschrank wie ein frisch ... eh?", "Warum liegt hier Stroh?", "Messi auf die 1", "Cristiano auf die 1", "Hinweis: 1/2 Ente + 1/2 Ente = 1 Ganz","Hinweis: Sei im Unterricht aufmerksam", "Hinweis: 1 + 1 = 11", "Welche Zeitform ist: Der Busfahrer war pünktlich gewesen.? Bus-quam-Perfekt","Hinweis: EIn Tag ohne Lächeln ist ein verlorener Tag","Was ist orange und läuft durch den Wald? Eine Wanderine! hahaha...","Hinweis: Auf dem Stundenplan steht heute kein Unterricht, sondern einfach nur Fun!","Die Cookies sind keine Kekse :(","Ich kann dir alles erklären, aber nicht die Mathehausaufgaben!","Bist du die Skyline meiner Stadt? Denn du lässt mein Herz höher schlagen!","Bist du etwa ein Quadrat in meiner linearen Gleichung, oder warum fühle ich mich ohne dich so irrational?🧐🍷","Wenn ich deine Hardware sehe, wird meine Software kalt","ALL I WANT FOR CHRISTMAS IS YOU 🎶","Entschuldige die schlechten Witze, aber das Budget ist leider nicht ausreichend...","Hinweis: KIs werden nicht bezahlt :(",]
 let SatzRandom = ""
 
 function showSlides() {
@@ -290,11 +300,6 @@ function plusSlides(n) {
     showSlides();
     startSlideShow();}
 
-    window.onload = function() {
-    slideIndex = 1;
-    startSlideShow();
-    SatzHallo()}
-
 let person = localStorage.getItem("username"); 
     if(person){
        document.getElementById("Willkommen").innerHTML= person; IstSchueler(person);}
@@ -317,6 +322,7 @@ function SatzHallo() {
 
 function ausloggen(){
     localStorage.removeItem('username');
+    localStorage.removeItem('buttonPressed');
     location.reload()}
 
 document.getElementById("ausloggenB").addEventListener('click', function(){ausloggen();});
@@ -325,22 +331,23 @@ document.getElementById("SatzZufall").addEventListener("click", function(){SatzH
 function AnderSatz(){
     document.getElementById("Satz").textContent = SatzRandom}
 
+function Cookies(){ 
+    document.getElementById("Meldung").style.display = "none"; 
+    localStorage.setItem("buttonPressed", "true");}
 
-function Cookies(){
-    document.getElementByID("").display.visibility = hidden}
+window.onload = function() {
+    slideIndex = 1;
+    startSlideShow();
+    SatzHallo();
+    if (localStorage.getItem("buttonPressed") === "true") {
+        document.getElementById("Meldung").style.display = "none";
+    } else {
+        document.getElementById("Meldung").style.display = "block";}};
 
-document.getElementByID("").addeventlistener('click',function(){Cookies()}
-
-sessionStorage.SeiteLaden = (parseInt(sessionStorage.SeiteLaden) || 0) + 1
-
-if (sessionStorage.SeiteLaden > 5){
-    document.getElementById('Meldung').style.display = "block"}
-
-    document.getElementById('Schließen').addEventListener('click', function(){document.getElementById('Meldung').style.display = "none"});
+document.getElementById("Schließen").addEventListener("click", function() { Cookies(); });
 
 
 </script>
-
-
 </body>
+
 </html>
