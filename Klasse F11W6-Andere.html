@@ -1,21 +1,46 @@
 <!DOCTYPE html>
-<html lang="de" class="fade-in">
+<html lang="de">
 <head>
-    <title>Klasse F11W6 Klassenfotos</title>
+    <title>Klasse F11W6 Andere</title>
     <link rel="icon" href="Bilder/F11W6.png">
 </head>
 <style>
+
+.platzmacher{
+    padding-top: 100px;
+    padding-bottom: 100px;}
 
 .logoFW6{
     width: 65px; 
     height: 31px;}
 .Hauptbild{
     height: 650px; 
-    width: 1000px;
-    }
+    width: 1000px;}
 .aktiv{
     background-color:
     rgb(188, 173, 109);}
+
+.sterne{
+    font-size: 40px;
+    color: lightgray;
+    cursor: pointer;}
+.sterne:hover{
+    color: rgb(188, 173, 109);}
+.sterne.selected{
+    color: rgb(188, 173, 109);}
+.comment-box {
+    width: 50%;
+    margin-top: 20px;}
+.comment-section {
+    margin-top: 30px;;}
+.delete-button {
+    color: rgba(163, 12, 12, 0.788);
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    height: 60px;
+    width: 90px;;}
+
 
 
 html,body{
@@ -39,7 +64,7 @@ li a{
     text-decoration: none;
     font-size: 35px;}
 li a:hover{
-    background-color: rgb(188, 173, 109);}
+    color: rgb(188, 173, 109);}
 ul{
     list-style-type: none; 
     background-color: rgb(221, 213, 184);
@@ -50,49 +75,114 @@ img{vertical-align: middle;}
 
 footer{
     background-color: rgb(188, 173, 109); 
-    padding: 5px; 
+    padding: 20px; 
     width: 100%; 
     font-size: 20px;
-    position: absolute;}
+    position: block;}
 
-hr{
-    margin-top: 100px;}
+hr{margin-top: 1px;}
 
-table{margin: 0px 100px 200px 100px
-}
+table{margin: 0px 100px 200px 100px;
+    display: block; position: relative;}
+
+p{color: rgb(188, 173, 109)}
+
+
+button:hover{ border: none ;background-color: rgb(188, 173, 109);}
 
 </style>
 
 <body>
 
 <ul>
-    <li> <a href="https://artichero.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
-    <li> <a href="Klasse F11W6.html">Sch&uuml;ler</a></li>
-    <li> <a href="Klasse F11W6-Klassenfotos.html">Klassenfotos</a></li>
-    <li> <a href="Klasse F11W6-Ausflüge.html">Ausfl&uuml;ge</a> </li>
-    <li> <a class="aktiv" href="Klasse F11W6-Andere.html">Andere</a></li>
-    <li> <a id="ausloggenB"> Ausloggen </a></li>
+    <li> <a href="http://localhost/JuanPraktikum/Klasse/Klasse%20F11W6.html"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
+    <li> <a href="http://localhost/JuanPraktikum/Klasse/Klasse%20F11W6-Sch%c3%bcler.html">Sch&uuml;ler</a></li>
+    <li> <a href="http://localhost/JuanPraktikum/Klasse/Klasse%20F11W6-Klassenfotos.html">Klassenfotos</a></li>
+    <li> <a href="http://localhost/JuanPraktikum/Klasse/Klasse%20F11W6-Ausfl%c3%bcge.html">Ausfl&uuml;ge</a> </li>
+    <li> <a class="aktiv" href="http://localhost/JuanPraktikum/Klasse/Klasse%20F11W6-Andere.html">Andere</a></li>
 </ul>
+<br>
+<br>
+<br>
+<h1>Bewerte diese Seite und gebe uns Empfelungen!</h1>
+<br><br><br><br>
 
-<h1>Andere...</h1>
+<div id="BewertungStern" style="display: flex; justify-content: center;">
+    <span class="sterne" data-value="1"> &star; </span>
+    <span class="sterne" data-value="2"> &star; </span>
+    <span class="sterne" data-value="3"> &star; </span>
+    <span class="sterne" data-value="4"> &star; </span>
+    <span class="sterne" data-value="5"> &star; </span>
+</div>
 
-<br>
-<br>
-<Table>
-<img src="Bilder F11W6/Bau.png" alt="nicht fertig">
-<p>WIR ARBEITEN NOCH DARAN :)</p>
-</Table>
-<br>
-<br>
-<br>
-<br>
+<div class="comment-section">
+    <textarea id="commentText" class="comment-box" placeholder="Hinterlasse deinen Kommentar..."></textarea>
+    <button onclick="submitComment()">Kommentar absenden</button>
+</div>
+
+<div class="platzmacher"></div>
+<h3>Kommentare:</h3>
+<div id="comments"></div>
 
 
-
+<div class="platzmacher"> </div>
 
 <footer>
-    <p style="color: white;">Berufliche Oberschule Unterschlei&szlig;heim . S&uuml;dliche Ingolst&auml;dter Stra&szlig;e 1 . 85716 Unterschlei&szlig;heim . Tel: 089. 3 16 05 68 80 . E-Mail: sekretariat@fosbos-ush.de </p>
+    <p style="margin:1px; padding: 2px; color: white;">Berufliche Oberschule Unterschlei&szlig;heim . S&uuml;dliche Ingolst&auml;dter Stra&szlig;e 1 . 85716 Unterschlei&szlig;heim . Tel: 089. 3 16 05 68 80 . E-Mail: sekretariat@fosbos-ush.de </p>
 </footer>
+
+<script>
+//das habe ich nicht gemacht, alle andere Scripts schon :p
+
+const sterne = document.querySelectorAll('.sterne');
+const commentsContainer = document.getElementById('comments');
+const commentText = document.getElementById('commentText');
+let selectedRating = 0;
+
+window.onload = function() {
+    loadComments();
+        const storedRating = localStorage.getItem('rating');
+        if (storedRating) {
+            selectedRating = parseInt(storedRating);
+            updateStars(selectedRating);}};
+
+sterne.forEach(star => {
+    star.addEventListener('click', () => {
+        selectedRating = star.getAttribute('data-value');
+        localStorage.setItem('rating', selectedRating);
+        updateStars(selectedRating);});});
+
+function updateStars(rating) {
+    sterne.forEach(star => {
+        if (star.getAttribute('data-value') <= rating) {
+            star.classList.add('selected');
+    } else {star.classList.remove('selected');}});}
+
+function submitComment() {
+    const comment = commentText.value.trim();
+    if (comment) {
+        let comments = JSON.parse(localStorage.getItem('comments')) || [];
+            comments.push({ comment: comment, rating: selectedRating });
+            localStorage.setItem('comments', JSON.stringify(comments));
+            commentText.value = '';
+            loadComments();}}
+
+function loadComments() {
+    const comments = JSON.parse(localStorage.getItem('comments')) || [];
+        commentsContainer.innerHTML = '';
+        comments.forEach((c, index) => {
+            const commentElement = document.createElement('div');
+            const formattedComment = c.comment.replace(/\n/g, '<br>')
+            commentElement.innerHTML = `<p><strong>Bewertung: ${c.rating} Sterne</strong></p><p>${formattedComment}</p><button class="delete-button" onclick="deleteComment(${index})">Loeschen</button><hr>`;
+            commentsContainer.appendChild(commentElement);});}
+
+
+function deleteComment(index) {
+        let comments = JSON.parse(localStorage.getItem('comments')) || [];
+            comments.splice(index, 1); 
+            localStorage.setItem('comments', JSON.stringify(comments));
+            loadComments();}
+</script>
 
 </body>
 </html>
