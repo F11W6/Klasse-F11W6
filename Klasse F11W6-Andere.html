@@ -41,7 +41,12 @@
     height: 60px;
     width: 90px;;}
 
-
+#ClickB{
+    background-color: rgb(221, 213, 184);
+    font-size: 50px; 
+    border-radius: 10px;}
+#ClickB:hover{
+background-color: rgb(188, 173, 109);}
 
 html,body{
     overflow-x: hidden;}
@@ -79,7 +84,7 @@ footer{
     width: 100%; 
     font-size: 20px;
     position: absolute;}
-
+    
 hr{
     margin-top: 70px;
     width: 90%;
@@ -107,25 +112,23 @@ button:hover{ border: none ;background-color: rgb(188, 173, 109);}
 <br>
 <br>
 <br>
-<h1>Bewerte diese Seite und gebe uns Empfelungen!</h1>
-<br><br><br><br>
+<h1>Andere</h1>
 
-<div id="BewertungStern" style="display: flex; justify-content: center;">
-    <span class="sterne" data-value="1"> &star; </span>
-    <span class="sterne" data-value="2"> &star; </span>
-    <span class="sterne" data-value="3"> &star; </span>
-    <span class="sterne" data-value="4"> &star; </span>
-    <span class="sterne" data-value="5"> &star; </span>
-</div>
+<br><br>
 
-<div class="comment-section">
-    <textarea id="commentText" class="comment-box" placeholder="Hinterlasse deinen Kommentar..."></textarea>
-    <button onclick="submitComment()">Kommentar absenden</button>
-</div>
-
-<div class="platzmacher"></div>
-<h3>Kommentare:</h3>
-<div id="comments"></div>
+<div id="tageZaehler"></div>
+<br>
+<hr>
+<br><br>
+<div id="Zielende"> </div>
+<br>
+<hr>
+<br><br>
+<h2>Klickzähler</h2>
+<button id="ClickB" onclick="addClick()">Klicken</button>
+<p id="counter">Klicks: 0</p>
+<br>
+<p style="font-size: 45px;" id="SatzNummer">Klicke, um zu beginnen!</p>
 
 
 <div class="platzmacher"> </div>
@@ -138,54 +141,28 @@ button:hover{ border: none ;background-color: rgb(188, 173, 109);}
 
 <script>
 
-const sterne = document.querySelectorAll('.sterne');
-const commentsContainer = document.getElementById('comments');
-const commentText = document.getElementById('commentText');
-let selectedRating = 0;
+const startDatum = new Date('2024-09-10');
+const heute = new Date();
+const vergangeneTage = Math.floor((heute - startDatum) / (1000 * 60 * 60 * 24));
+    document.getElementById('tageZaehler').innerText = `Es sind ${vergangeneTage} Tage seit dem Schulstart vergangen!`;
+const Ende = new Date('2025-07-31');
+const Ziel = Math.floor((Ende - heute) / (1000 * 60 * 60 * 24));
+    document.getElementById("Zielende").innerText = `Noch ${Ziel} Tage bis zu den Sommerferien`
 
-window.onload = function() {
-    loadComments();
-        const storedRating = localStorage.getItem('rating');
-        if (storedRating) {
-            selectedRating = parseInt(storedRating);
-            updateStars(selectedRating);}};
+let count = 0;
 
-sterne.forEach(star => {
-    star.addEventListener('click', () => {
-        selectedRating = star.getAttribute('data-value');
-        localStorage.setItem('rating', selectedRating);
-        updateStars(selectedRating);});});
+function addClick() {
+    count++; 
+    document.getElementById('counter').textContent = `Anzahl der Klicks: ${count}`;
+if (count===3){document.getElementById('SatzNummer').textContent = "Weiter so!"}
+else if (count===10){document.getElementById('SatzNummer').textContent = "Weiter weiter!"}
+else if (count===30){document.getElementById('SatzNummer').textContent = "Sieht gut aus!"}
+else if (count===100){document.getElementById('SatzNummer').textContent = "Unglaublich..."}
+else if (count===200){document.getElementById('SatzNummer').textContent = "Als ob du immer noch da bist!"}
 
-function updateStars(rating) {
-    sterne.forEach(star => {
-        if (star.getAttribute('data-value') <= rating) {
-            star.classList.add('selected');
-    } else {star.classList.remove('selected');}});}
-
-function submitComment() {
-    const comment = commentText.value.trim();
-    if (comment) {
-        let comments = JSON.parse(localStorage.getItem('comments')) || [];
-            comments.push({ comment: comment, rating: selectedRating });
-            localStorage.setItem('comments', JSON.stringify(comments));
-            commentText.value = '';
-            loadComments();}}
-
-function loadComments() {
-    const comments = JSON.parse(localStorage.getItem('comments')) || [];
-        commentsContainer.innerHTML = '';
-        comments.forEach((c, index) => {
-            const commentElement = document.createElement('div');
-            const formattedComment = c.comment.replace(/\n/g, '<br>')
-            commentElement.innerHTML = `<p><strong>Bewertung: ${c.rating} Sterne</strong></p><p>${formattedComment}</p><button class="delete-button" onclick="deleteComment(${index})">Loeschen</button><hr>`;
-            commentsContainer.appendChild(commentElement);});}
+else{document.getElementById("SatzNummer").textContent = "Weiter so!"}}
 
 
-function deleteComment(index) {
-        let comments = JSON.parse(localStorage.getItem('comments')) || [];
-            comments.splice(index, 1); 
-            localStorage.setItem('comments', JSON.stringify(comments));
-            loadComments();}
 </script>
 
 </body>
