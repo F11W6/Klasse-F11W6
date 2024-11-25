@@ -306,15 +306,16 @@ let person = localStorage.getItem("username");
         localStorage.setItem("username", person);
         document.getElementById("Willkommen").innerHTML = person; IstSchueler(person);}}
 
-function IstSchueler(person){
+function IstSchueler(person) {
     if (!person) {html.style.visibility = "hidden";
         alert("Zugriff verweigert: Du hast keinen Namen eingegeben.");
         return;}
-                  
-    if (Schueler.includes(person)){html.style.visibility = "visible"}
-    else{html.style.visibility = "hidden";
-    alert("Zugriff verweigert: Du bist kein Schueler oder Lehrkraft der Klasse F11W6");
-    localStorage.removeItem("username")}
+    
+    if (Schueler.includes(person)) {html.style.visibility = "visible";} 
+    else {html.style.visibility = "hidden";
+        alert("Zugriff verweigert: Du bist kein Schueler oder Lehrkraft der Klasse F11W6");
+        localStorage.removeItem("username");}}
+
 
 function SatzHallo() {
     SatzRandom = Saetze[Math.floor(Math.random() * Saetze.length)];
