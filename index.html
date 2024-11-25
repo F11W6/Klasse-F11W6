@@ -261,8 +261,6 @@ button{
     <p style="color: white; outline: none;">Berufliche Oberschule Unterschleißheim | Südliche Ingolstädter Straße 1 | 85716 Unterschleißheim | Tel: 089 316056880 | E-Mail: sekretariat@fosbos-ush.de </p>
 </footer>
 
-
-
 <script>
 let slideIndex = 0;
 let slideInterval;
@@ -309,7 +307,7 @@ let person = localStorage.getItem("username");
         document.getElementById("Willkommen").innerHTML = person; IstSchueler(person);}}
 
 function IstSchueler(person){
-    if (Schueler.includes(person)){html.style.visibility = "visible"
+    if (Schueler.includes(person)){html.style.visibility = "visible"}
     else{html.style.visibility = "hidden";
     alert("Zugriff verweigert: Du bist kein Schueler oder Lehrkraft der Klasse F11W6");
     localStorage.removeItem("username")}}
@@ -351,3 +349,4 @@ document.getElementById("Schließen").addEventListener("click", function() { Coo
 </body>
 
 </html>
+ 
