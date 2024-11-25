@@ -309,8 +309,7 @@ let person = localStorage.getItem("username");
         document.getElementById("Willkommen").innerHTML = person; IstSchueler(person);}}
 
 function IstSchueler(person){
-    if (Schueler.includes(person)){html.style.visibility = "visible"}
-        else if(Schueler === ""){html.style.visibility = "hidden"}
+    if (Schueler.includes(person)){html.style.visibility = "visible"
     else{html.style.visibility = "hidden";
     alert("Zugriff verweigert: Du bist kein Schueler oder Lehrkraft der Klasse F11W6");
     localStorage.removeItem("username")}}
