@@ -307,8 +307,11 @@ let person = localStorage.getItem("username");
         document.getElementById("Willkommen").innerHTML = person; IstSchueler(person);}}
 
 function IstSchueler(person){
+    if (!person) {html.style.visibility = "hidden";
+        alert("Zugriff verweigert: Du hast keinen Namen eingegeben.");
+        return;}
+                  
     if (Schueler.includes(person)){html.style.visibility = "visible"}
-        else if (person === ""){html.style.visibility = "hidden"}
     else{html.style.visibility = "hidden";
     alert("Zugriff verweigert: Du bist kein Schueler oder Lehrkraft der Klasse F11W6");
     localStorage.removeItem("username")}}
