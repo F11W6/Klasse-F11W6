@@ -308,7 +308,7 @@ let person = localStorage.getItem("username");
 
 function IstSchueler(person){
     if (Schueler.includes(person)){html.style.visibility = "visible"}
-        else if (Schueler === ""){html.style.visibility = "hidden"}
+        else if (person === ""){html.style.visibility = "hidden"}
     else{html.style.visibility = "hidden";
     alert("Zugriff verweigert: Du bist kein Schueler oder Lehrkraft der Klasse F11W6");
     localStorage.removeItem("username")}}
