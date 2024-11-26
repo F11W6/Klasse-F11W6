@@ -304,15 +304,20 @@ let person = localStorage.getItem("username");
     
     else{
         person = prompt("Hallo, wie lautet dein Name?")
-        if (person != null){
+        if (person != null && person.trim() !==""){
         localStorage.setItem("username", person);
-        document.getElementById("Willkommen").innerHTML = person; IstSchueler(person);}}
+        document.getElementById("Willkommen").innerHTML = person; IstSchueler(person);}
+    else{ DetectNoPerson()}}
 
 function IstSchueler(person){
     if (Schueler.includes(person)){html.style.visibility = "visible"}
     else{html.style.visibility = "hidden"
     alert("Zugriff verweigert: Du bist kein Schueler oder Lehrkraft der Klasse F11W6");
-    localStorage.removeItem("username")}}
+    localStorage.removeItem("username"); DetectNoPerson()}}
+    
+function DetectNoPerson() {
+    if (!person || person === "0") { 
+        html.style.visibility = "hidden";}}
 
 function SatzHallo() {
     SatzRandom = Saetze[Math.floor(Math.random() * Saetze.length)];
@@ -335,6 +340,7 @@ function Cookies(){
 
 
 
+
 window.onload = function() {
     slideIndex = 1;
     startSlideShow();
@@ -342,7 +348,8 @@ window.onload = function() {
     if (localStorage.getItem("buttonPressed") === "true") {
         document.getElementById("Meldung").style.display = "none";
     } else {
-        document.getElementById("Meldung").style.display = "block";}};
+        document.getElementById("Meldung").style.display = "block";}
+    DetectNoPerson();};
 
 document.getElementById("Schließen").addEventListener("click", function() { Cookies(); });
 
