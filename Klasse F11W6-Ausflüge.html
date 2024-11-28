@@ -220,8 +220,8 @@ button:hover{
 <img id="Bildkarte" class="Karte" src="Bilder F11W6/Titelloses 5_20241128103211.png" usemap="#image-map">
 
 <map name="image-map">
-    <area target="" alt="Gericht" title="Gericht" coords="256,356,275,382" shape="rect">
-    <area target="" id="Schliersee" alt="Schliersee" title="Schliersee" coords="280,391,299,417" shape="rect">
+    <area target="" id="Gericht" alt="Gericht2025" title="Gericht" coords="256,356,275,382" shape="rect">
+    <area target="" id="Schliersee" alt="Schliersee2024" title="Schliersee" coords="280,391,299,417" shape="rect">
 </map>
 
 <p class="infoText" id="Info1">Schliersee: <br>Am 23.09.2024 starteten wir um 9:28 Uhr, obwohl viele Sch&uuml;ler aufgrund von Problemen mit der S-Bahn versp&auml;tet eintrafen. Wir trafen uns schlie&szlig;lich mit der Klasse F11W4 an der Donnersberger Br&uuml;cke. Nach etwa 50 Minuten erreichten wir die Bahnstation in Schliersee. </p>
@@ -238,7 +238,8 @@ button:hover{
 
 <p class="infoText" id="Info6"></p>
 
-<p class="infoText" id="Info7">Gericht:</p>
+<p class="infoText" id="Info7">Gericht:
+<br> bald neue Infos!</p>
     
 <button id="Weiter" style="visibility: hidden" class="ButtonInfoText"> weiter </button>
 
@@ -286,6 +287,17 @@ button:hover{
 
 <script>
 
+
+let infoDiv1 = document.getElementById("Info1");
+let infoDiv2 = document.getElementById("Info2");
+let infoDiv3 = document.getElementById("Info3");
+let infoDiv4 = document.getElementById("Info4");
+let infoDiv5 = document.getElementById("Info5");
+let infoDiv6 = document.getElementById("Info6");
+let infoDiv7 = document.getElementByID("Info7");
+let notizbuchImg = document.getElementById("Notizbuch");
+let WeiterButton = document.getElementById("Weiter");
+
 let currentText = 0;
 
 let slideIndex = 1;
@@ -310,16 +322,24 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";}
 
-function Erscheinen(){
-    let infoDiv1 = document.getElementById("Info1");
-    let infoDiv2 = document.getElementById("Info2");
-    let infoDiv3 = document.getElementById("Info3");
-    let infoDiv4 = document.getElementById("Info4");
-    let infoDiv5 = document.getElementById("Info5");
-    let infoDiv6 = document.getElementById("Info6");
-    let notizbuchImg = document.getElementById("Notizbuch");
-    let WeiterButton = document.getElementById("Weiter");
+function ErscheinenGer() {
+    if (infoDiv7.style.opacity=== "1" || notizbuchImg.style.visibility ==="visible"){
+        infoDiv1.style.opacity= "0";
+        infoDiv2.style.opacity= "0";
+        infoDiv3.style.opacity= "0";
+        infoDiv4.style.opacity= "0";
+        infoDiv5.style.opacity= "0";
+        infoDiv6.style.opacity= "0";
+        notizbuchImg.style.visibility = "hidden";
+        WeiterButton.style.visibility = "hidden"; }
+}
+    document.getElementByID("Gericht").addeventListener("click", function() {ErscheinenGer()});
 
+
+
+
+function Erscheinen(){
+    
     if (infoDiv1.style.opacity=== "1" || notizbuchImg.style.visibility ==="visible"){
         infoDiv1.style.opacity= "0";
         infoDiv2.style.opacity= "0";
@@ -327,6 +347,8 @@ function Erscheinen(){
         infoDiv4.style.opacity= "0";
         infoDiv5.style.opacity= "0";
         infoDiv6.style.opacity= "0";
+        infoDiv7.style.opacity= "0";
+        
         notizbuchImg.style.visibility = "hidden"
         WeiterButton.style.visibility = "hidden"; }
     else{
@@ -336,6 +358,7 @@ function Erscheinen(){
         infoDiv4.style.opacity= "0";
         infoDiv5.style.opacity= "0";
         infoDiv6.style.opacity= "0";
+        infoDiv7.style.opacity= "0";
         notizbuchImg.style.visibility = "visible"
         WeiterButton.style.visibility = "visible"}}
 
