@@ -288,16 +288,6 @@ button:hover{
 <script>
 
 
-let infoDiv1 = document.getElementById("Info1");
-let infoDiv2 = document.getElementById("Info2");
-let infoDiv3 = document.getElementById("Info3");
-let infoDiv4 = document.getElementById("Info4");
-let infoDiv5 = document.getElementById("Info5");
-let infoDiv6 = document.getElementById("Info6");
-let infoDiv7 = document.getElementByID("Info7");
-let notizbuchImg = document.getElementById("Notizbuch");
-let WeiterButton = document.getElementById("Weiter");
-
 let currentText = 0;
 
 let slideIndex = 1;
@@ -322,23 +312,19 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";}
 
-function ErscheinenGer() {
-    if (infoDiv7.style.opacity=== "1" || notizbuchImg.style.visibility ==="visible"){
-        infoDiv1.style.opacity= "0";
-        infoDiv2.style.opacity= "0";
-        infoDiv3.style.opacity= "0";
-        infoDiv4.style.opacity= "0";
-        infoDiv5.style.opacity= "0";
-        infoDiv6.style.opacity= "0";
-        notizbuchImg.style.visibility = "hidden";
-        WeiterButton.style.visibility = "hidden"; }
-}
-    document.getElementByID("Gericht").addeventListener("click", function() {ErscheinenGer()});
-
-
-
 
 function Erscheinen(){
+
+let infoDiv1 = document.getElementById("Info1");
+let infoDiv2 = document.getElementById("Info2");
+let infoDiv3 = document.getElementById("Info3");
+let infoDiv4 = document.getElementById("Info4");
+let infoDiv5 = document.getElementById("Info5");
+let infoDiv6 = document.getElementById("Info6");
+let infoDiv7 = document.getElementByID("Info7");
+let notizbuchImg = document.getElementById("Notizbuch");
+let WeiterButton = document.getElementById("Weiter");
+
     
     if (infoDiv1.style.opacity=== "1" || notizbuchImg.style.visibility ==="visible"){
         infoDiv1.style.opacity= "0";
