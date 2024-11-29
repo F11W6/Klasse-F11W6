@@ -346,6 +346,7 @@ window.onload = function() {
     slideIndex = 1;
     startSlideShow();
     SatzHallo();
+    blockMobileAccess;
     if (localStorage.getItem("buttonPressed") === "true") {
         document.getElementById("Meldung").style.display = "none";
     } else {
@@ -365,7 +366,6 @@ function blockMobileAccess() {
         document.body.style.backgroundColor = "#f8d7da";
         document.body.style.color = "#721c24";}}
 
-window.onload = blockMobileAccess;
 
 
 </script>
