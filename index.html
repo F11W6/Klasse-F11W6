@@ -354,6 +354,19 @@ window.onload = function() {
 
 document.getElementById("Schließen").addEventListener("click", function() { Cookies(); });
 
+function blockMobileAccess() {
+    const mobileRegex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+    if (mobileRegex.test(navigator.userAgent)) {
+        document.body.innerHTML = `
+            <div style="text-align: center; margin-top: 20%; font-family: Arial, sans-serif;">
+                <h1>Zugriff verweigert</h1>
+                <p>Der Zugriff auf diese Seite ist von Mobilgeräten nicht erlaubt.</p>
+            </div>`;
+        document.body.style.backgroundColor = "#f8d7da";
+        document.body.style.color = "#721c24";}}
+
+window.onload = blockMobileAccess;
+
 
 </script>
 </body>
