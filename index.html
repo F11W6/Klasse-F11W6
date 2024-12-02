@@ -13,11 +13,6 @@
 .logoFW6 {
     width: 65px;
     height: 31px;}
-.logout{
-    margin-left:196px;
-    width: 53px;
-    height: 34px;
-    padding: 0px 0px}
 .Hauptbild {
     height: auto;
     width: 80%;}
@@ -88,8 +83,32 @@
     cursor: pointer;
     float: right;
     font-size: 25px;}
+.navMenü {
+    display: flex;
+    align-items: center;
+    background-color: rgb(221, 213, 184);
+    padding: 0;
+    margin: 0;
+    list-style-type: none;}
+.navMenü li {
+    display: inline-block;}
+.navMenü li a {
+    padding: 14px 16px;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 35px;}
+.logout-Container {
+    margin-left: auto;}
+.logout {
+    width: 53px;
+    height: 34px;
+    cursor: pointer;}
+.navMenü li a:hover {
+    background-color: rgb(188, 173, 109);}
 
-    
+
 @media (max-width: 1200px) {
     .slideContainer, .textContainer {
         width: 80%;}
@@ -111,7 +130,16 @@
         width: 80%;
         font-size: 15px}
     #schließen{
-        font-size: 20px;}}
+        font-size: 20px;}
+        .navMenü {
+        flex-wrap: wrap;}
+    .navMenü li a {
+        font-size: 16px;}
+    .logoFW6 {
+        width: 50px;}
+    .logout {
+        width: 40px;
+        height: 25px;}}
 
 @media (max-width: 480px) {
     .logoFW6 {
@@ -123,7 +151,15 @@
     h1 {
         font-size: 24px;}
     .vor, .nach {
-        display: none;}}
+        display: none;}
+    .navMenü {
+        flex-direction: column;
+        align-items: flex-start;}
+    .navMenü li {
+        width: 100%;}
+    .navMenü li a {
+        text-align: left;
+        padding: 10px;}}
 
 @keyframes fade {
     from {opacity: 0;}
@@ -191,13 +227,13 @@ button{
 
 <body>
 
-<ul onmouseover="">
+<ul class="navMenü">
     <li> <a class="aktiv" href="https://f11w6.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
     <li> <a href="Klasse F11W6-Schüler.html">Sch&uuml;ler</a></li>
     <li> <a href="Klasse F11W6-Klassenfotos.html">Klassenfotos</a></li>
     <li> <a href="Klasse F11W6-Ausflüge.html">Ausfl&uuml;ge</a> </li>
     <li> <a href="Klasse F11W6-Andere.html">Andere</a></li>
-    <li> <a id="ausloggenB"> <img src="Bilder F11W6/Ausloggen.png" alt="Auslog" class="logout"> </img> </a></li>
+    <li class="logout-Container"> <a id="ausloggenB"> <img src="Bilder F11W6/Ausloggen.png" alt="Auslog" class="logout"> </img> </a></li>
 </ul>
 
 <div class="slideContainer">
@@ -369,5 +405,7 @@ function blockMobileAccess() {
 
 </script>
 </body>
+
+</html>
 
 </html>
