@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <title>Klasse F11W6 Sch&uuml;ler</title>
+    <title>Klasse F11W6 - Sch&uuml;ler</title>
     <link rel="icon" href="Bilder F11W6/F11W6.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
 </head>
@@ -18,40 +18,70 @@
     background-color:
     rgb(188, 173, 109);}
 
-@media (max-width: 1200px) {
+
+    @media (max-width: 1200px) {
+    .slideContainer, .textContainer {
+        width: 80%;}
     h1, h2 {
-        font-size: 30px;}}
+        font-size: 30px;}
+    .toggle-button{
+        display: none;}
+    .nav-Menü{
+        display: block}}
 
 @media (max-width: 768px) {
     .platzmacher {
         padding-top: 100px;
         padding-bottom: 100px;}
+    .slideContainer{
+        width: 100%;
+        top: 30px;
+        padding-top: 30px;
+        padding-bottom: 50px;}
+    .textContainer, .slideContainer{
+        margin: 0 auto;}
+    #schließen{
+        font-size: 20px;}
+    #Satz{
+        font-size: 27px;}
+    #Vollmenu{
+        display: none;}
+    #K11{
+        padding-bottom: 40px;}
+    .navMenü {
+        left: -100%;}
+    .toggle-button {
+        display: block;}
+    .navMenü li a {
+        font-size: 30px;
+        padding: 15px;
+        width: 100%;}
+    .logoFW6 {
+        width: 50px;}
+    .logout {
+        width: 50px;
+        height: 35px;}
+    .navMenü.active {
+        left: 0;}
     h1, h2 {
-        font-size: 24px;}
+        font-size: 20px;}
     footer{
         width: 80%;
         font-size: 15px}
-    .navMenü {
-        flex-wrap: wrap;}
-    .navMenü li a {
-        font-size: 16px;}
-    .logoFW6 {
-        width: 50px;}}
+    div, p, button{
+        font-size: 17px;}}
 
 @media (max-width: 480px) {
     .logoFW6 {
         width: 50px;
         height: 25px;}
+    .Hauptbild {
+        width: 100%;
+        height: auto;}
     h1 {
         font-size: 24px;}
-    .navMenü {
-        flex-direction: column;
-        align-items: flex-start;}
-    .navMenü li {
-        width: 100%;}
-    .navMenü li a {
-        text-align: left;
-        padding: 10px;}}
+    .vor, .nach {
+        display: none;}}
 
 
 html,body{
@@ -103,14 +133,28 @@ table{
 
 <body>
 
-<ul class="navMenü">
-    <li> <a href="https://f11w6.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
-    <li> <a class="aktiv" href="Klasse F11W6-Schüler.html">Sch&uuml;ler</a></li>
-    <li> <a href="Klasse F11W6-Klassenfotos.html">Klassenfotos</a></li>
-    <li> <a href="Klasse F11W6-Ausflüge.html">Ausfl&uuml;ge</a> </li>
-    <li> <a href="Klasse F11W6-Andere.html">Andere</a></li>
+<div class="toggle-container">
+    <button class="toggle-button">&#9776;</button>
+</div>
+<ul id="Vollmenu">
+    <li><a class="aktiv" href="https://f11w6.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
+    <li><a href="Klasse F11W6-Schüler.html">Schüler</a></li>
+    <li><a href="Klasse F11W6-Klassenfotos.html">Klassenfotos</a></li>
+    <li><a href="Klasse F11W6-Ausflüge.html">Ausflüge</a></li>
+    <li><a href="Klasse F11W6-Andere.html">Andere</a></li>
+    <li class="logout-Container"><a id="ausloggenB"><img src="Bilder F11W6/Ausloggen.png" alt="Auslog" class="logout"></a></li>
 </ul>
-
+    
+<ul class="navMenü" id="nav-menu">
+    <li><a href="https://f11w6.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
+    <li><a href="Klasse F11W6-Schüler.html">Schüler</a></li>
+    <li><a href="Klasse F11W6-Klassenfotos.html">Klassenfotos</a></li>
+    <li><a href="Klasse F11W6-Ausflüge.html">Ausflüge</a></li>
+    <li><a href="Klasse F11W6-Andere.html">Andere</a></li>
+    <li><a id="ausloggenB"><img src="Bilder F11W6/Ausloggen.png" alt="Auslog" class="logout"></a></li>
+    <li><span class="close-button">&times;</span></li>
+</ul>
+    
 <h1>Sch&uuml;ler</h1>
 
 <br>
