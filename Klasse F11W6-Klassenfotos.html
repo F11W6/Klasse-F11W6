@@ -16,11 +16,37 @@
 .aktiv{
     background-color:
     rgb(188, 173, 109);}
-
 .fade{
     animation-name: fade;
     animation-duration: 1s;}
-    
+    .navMenü li a:hover {
+    background-color: rgb(188, 173, 109);}
+.close-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;}
+.toggle-button {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 30px;
+    color: #fff;
+    background: transparent;
+    border: none;
+    z-index: 1000;}
+.toggle-container {
+    background-color: rgb(221, 213, 184);
+    padding: 10px;
+    height: 60px;
+    text-align: center;}
+.navMenü.active {
+    left: 0;}
 
 @media (max-width: 1200px) {
     .slideContainer, .textContainer {
