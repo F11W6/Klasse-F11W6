@@ -323,6 +323,16 @@ ul{
 <footer>
     <p style="color: white; outline: none;">| Berufliche Oberschule Unterschleißheim | Südliche Ingolstädter Straße 1 | 85716 Unterschleißheim |</p>
 </footer>
+<script>
+    const toggleButton = document.querySelector('.toggle-button');
+const navMenu = document.getElementById('nav-menu');
+const closeButton = document.querySelector('.close-button');
+toggleButton.addEventListener('click', () => {
+    navMenu.classList.toggle('active');});
 
+closeButton.addEventListener('click', () => {
+    navMenu.classList.remove('active');});
+
+</script>
 </body>
 </html>
