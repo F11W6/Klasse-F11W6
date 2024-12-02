@@ -148,6 +148,9 @@
     color: rgb(188, 173, 109); 
     margin: 0 auto; 
     text-align: center;}
+#CookiesText{
+    width: 90%; 
+    margin: 0px auto;}
 
 @media (max-width: 1200px) {
     .slideContainer, .textContainer {
@@ -193,8 +196,16 @@
         height: 35px;}
     .navMenü.active {
         left: 0;}
-    h1, h2 {
+    #CookiesText{
+        width: 0%;
+        font-size: 15px; 
+        margin: 0px auto}
+    .CookiesBlock{
+        width: 70%;}
+    h1, h2{
         font-size: 20px;}
+    h3{
+        font-size: 15px;}
     footer{
         width: 80%;
         font-size: 15px}
@@ -293,7 +304,7 @@ ul{
     <li><a href="Klasse F11W6-Klassenfotos.html">Klassenfotos</a></li>
     <li><a href="Klasse F11W6-Ausflüge.html">Ausflüge</a></li>
     <li><a href="Klasse F11W6-Andere.html">Andere</a></li>
-    <li><a id="ausloggenB"><img src="Bilder F11W6/Ausloggen.png" alt="Auslog" class="logout"></a></li>
+    <li><a id="ausloggenB2"><img src="Bilder F11W6/Ausloggen.png" alt="Auslog" class="logout"></a></li>
     <li><span class="close-button">&times;</span></li>
 </ul>
 
@@ -353,7 +364,7 @@ ul{
 
 <div id="Meldung" class="CookiesBlock">
     <h3 style="font-size: 15px;">Diese Seite nutzt Cookies</h3>
-    <p style="width: 90%; margin: 0px auto;">Diese Seite speichert nur deinen Namen, damit du dich beim nächsten Mal nicht erneut anmelden musst, es sei denn, du meldest dich ab. Ja, das war's :)</p>
+    <p id="CookiesText">Diese Seite speichert nur deinen Namen, damit du dich beim nächsten Mal nicht erneut anmelden musst, es sei denn, du meldest dich ab. Ja, das war's :)</p>
     <button id="Schließen"> x </button>
 </div>
 
@@ -428,6 +439,7 @@ function ausloggen(){
     location.reload()}
 
 document.getElementById("ausloggenB").addEventListener('click', function(){ausloggen();});
+document.getElementById("ausloggenB2").addEventListener('click', function(){ausloggen();});
 document.getElementById("SatzZufall").addEventListener("click", function(){SatzHallo(); AnderSatz();})
 
 function AnderSatz(){
