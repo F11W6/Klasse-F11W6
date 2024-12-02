@@ -5,74 +5,92 @@
     <link rel="icon" href="Bilder F11W6/F11W6.png">
 </head>
 <style>
-.platzmacher {
+.platzmacher{
     padding-top: 200px;
     padding-bottom: 200px;}
-.logoFW6 {
-    width: 65px;
+.logoFW6{
+    width: 65px; 
     height: 31px;}
-.Hauptbild {
-    height: auto;
-    width: 80%;}
-.aktiv {
-    background-color: rgb(188, 173, 109);}
-.slideshow {
-    display: none;}
-.textContainer {
-    width: 55%;
-    text-align: justify;}
-.slideContainer {
-    width: 78%;}
-.slideContainer, .textContainer {
-    margin-top: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;}
-.vor, .nach {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    color: rgb(188, 173, 109);
-    border-radius: 3px;
-    font-size: 18px;
-    user-select: none;
-    transform: translateY(-50%);}
-.vor {
-    left: 10px;}
-.nach {
-    right: 10px;}
-.vor:hover, .nach:hover {
-    background-color: rgb(81, 82, 83)}
-.fade {
-    animation-name: fade;
-    animation-duration: 2s;}
-.inline-container {
+.Hauptbild{
+    height: 650px; 
+    width: 1000px;}
+.aktiv{
+    background-color:
+    rgb(188, 173, 109);}
+.Karte{
+    border: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;}
-.SatzZufall{
-    border: 2px solid transparent ;
-    border-radius: 10px;
-    background-color: rgb(221, 213, 184);
-    font-size: 25px;
-    color: white;}
-.SatzZufall:hover{ 
-    background-color: rgb(188, 173, 109);}
-.CookiesBlock{
-    height: auto;
-    width: 18%;
+    justify-content: flex-start; 
+    margin-left: 100px;}
+.infoText{
+    font-family: "Lucida Console";
+    font-size: 19px; 
+    text-align: justify; 
+    width: 300px; 
+    height: 400px;
+    position: absolute;
+    top: 330px;
+    left: 680px;
     z-index: 1;
-    display: block;
-    left: 0px;
-    bottom: 0px;
-    font-size: 12px;
-    border: 2px solid;
-    border-color: rgba(188, 173, 109, 0.9);
-    position: fixed;
-    background-color: rgb(81, 82, 83);
-    animation: slideIn 0.5s ease-out forwards;}
+    opacity: 0;
+    transition: opacity .2s ease-in;}
+.Notizbuch{ 
+    position: absolute;
+    top: 275px;
+    left: 605px; 
+    width: 450px; 
+    height: 350px;}
+.ButtonInfoText{
+    height: 60px;
+    width: 170px;
+    font-size: 35px;
+    color: rgb(255, 255, 255); 
+    background-color: rgb(221, 213, 184); 
+    border: none ;
+    border-radius: 5px;
+    position: absolute;
+    left: 850px;
+    text-align: center;
+    top: 615px;
+    cursor: pointer;
+    box-sizing: border-box;
+    z-index: 1;
+    visibility: hidden; 
+    outline: none}
+.mySlides{
+    display: none;}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;}
+.text {
+  color: rgb(188, 173, 109);
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;}
+.numbertext {
+  color: rgb(221, 213, 184);
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;}
+.active, .dot:hover {
+  background-color: #717171;}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;}
 .navMenü {
     display: flex;
     align-items: center;
@@ -129,23 +147,6 @@
     display: none;}
 .navMenü.active {
     left: 0;}
-    
-#Schließen{    
-    background: none;
-    border: none;
-    color: rgb(188, 173, 109);
-    font-weight: bold;
-    cursor: pointer;
-    float: right;
-    font-size: 25px;}
-#Satz{
-    font-size: 50px; 
-    color: rgb(188, 173, 109); 
-    margin: 0 auto; 
-    text-align: center;}
-#CookiesText{
-    width: 90%; 
-    margin: 0px auto;}
 
 @media (max-width: 1200px) {
     .slideContainer, .textContainer {
@@ -156,26 +157,26 @@
         display: none;}
     .nav-Menü{
         display: block}}
-
+    
 @media (max-width: 768px) {
+    .platzmacher{
+        padding-top: 100px;
+        padding-bottom: 100px;}
+    .Notizbuch{
+        left: 405px;}
+    .infoText{
+        left: 580px;}
+    .Karte{
+        margin-left: 50px;}
     .platzmacher {
         padding-top: 100px;
         padding-bottom: 100px;}
-    .slideContainer{
-        width: 100%;
-        top: 30px;
-        padding-top: 30px;
-        padding-bottom: 50px;}
-    .textContainer, .slideContainer{
-        margin: 0 auto;}
-    #schließen{
-        font-size: 20px;}
-    #Satz{
-        font-size: 27px;}
     #Vollmenu{
         display: none;}
-    #K11{
-        padding-bottom: 40px;}
+    #CookiesText{
+        width: 0%;
+        font-size: 15px; 
+        margin: 0px auto}
     .navMenü {
         left: -100%;}
     .toggle-button {
@@ -191,13 +192,7 @@
         height: 35px;}
     .navMenü.active {
         left: 0;}
-    #CookiesText{
-        width: 0%;
-        font-size: 15px; 
-        margin: 0px auto}
-    .CookiesBlock{
-        width: 70%;}
-        .toggle-container {
+    .toggle-container {
         display: block;
         background-color: rgb(221, 213, 184);
         padding: 10px;
@@ -213,6 +208,7 @@
     div, p, button{
         font-size: 17px;}}
 
+
 @media (max-width: 480px) {
     .logoFW6 {
         width: 50px;
@@ -225,14 +221,9 @@
     .vor, .nach {
         display: none;}}
 
-
-@keyframes fade {
-    from {opacity: 0;}
-    to {opacity: 1;}}
-
-
 html,body{
-    overflow-x: hidden;}
+overflow-x: hidden;}
+
 h1,h2,h3,h4,h5,h6{
     font-size: 45px;}
 body{
@@ -242,24 +233,6 @@ body{
     text-align: center;
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;}
-img{
-    vertical-align: middle;
-    max-width: 100%;
-    height: auto;}
-
-footer{
-    background-color: rgb(188, 173, 109); 
-    padding: 5px; 
-    width: 100%; 
-    font-size: 20px;
-    position: absolute;}
-hr{
-    margin-top: 70px;
-    width: 90%;
-    border-color: rgb(188, 173, 109);}
-button{
-    outline: none;}
-
 li{
     float: left;}
 li a{ 
@@ -277,21 +250,43 @@ ul{
     overflow: hidden;
     padding: 0px;
     margin: 0px;}
+img{vertical-align: middle;}
+
+footer{
+    background-color: rgb(188, 173, 109); 
+    padding: 5px; 
+    width: 100%; 
+    font-size: 20px;
+    position: absolute;}
+hr{
+    margin-top: 70px;
+    width: 90%;
+    border-color: rgb(188, 173, 109);}
+
+table{margin: 0px 100px 200px 100px;
+    display: block; position: relative;}
+
+p{
+    color:black}
+
+button:hover{
+    border: none ;background-color: rgb(188, 173, 109);}
 
 </style>
 
 <body>
+
 <div class="toggle-container">
     <button class="toggle-button">&#9776;</button>
 </div>
 <ul id="Vollmenu">
-    <li><a class="aktiv" href="https://f11w6.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
+    <li><a href="https://f11w6.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
     <li><a href="Klasse F11W6-Schüler.html">Schüler</a></li>
     <li><a href="Klasse F11W6-Klassenfotos.html">Klassenfotos</a></li>
-    <li><a href="Klasse F11W6-Ausflüge.html">Ausflüge</a></li>
+    <li><a class="aktiv" href="Klasse F11W6-Ausflüge.html">Ausflüge</a></li>
     <li><a href="Klasse F11W6-Andere.html">Andere</a></li>
 </ul>
-    
+
 <ul class="navMenü" id="nav-menu">
     <li><a href="https://f11w6.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
     <li><a href="Klasse F11W6-Schüler.html">Schüler</a></li>
@@ -299,8 +294,8 @@ ul{
     <li><a href="Klasse F11W6-Ausflüge.html">Ausflüge</a></li>
     <li><a href="Klasse F11W6-Andere.html">Andere</a></li>
     <li><span class="close-button">&times;</span></li>
-</ul
-    
+</ul>
+
 <h1>Ausfl&uuml;ge 2024/2025</h1>
 
 <img class="Notizbuch" id= "Notizbuch" src="Bilder F11W6/Notizbuch2.png" alt="Notizbuch" style="visibility: hidden;">
@@ -507,6 +502,16 @@ document.getElementById("Schliersee").addEventListener("click", function () {Ers
 document.getElementById("Gericht").addEventListener("click", function () {GerichtAnzeigen();});
 
 document.getElementById("Weiter").addEventListener("click", function () {weitergehts();});
+
+const toggleButton = document.querySelector('.toggle-button');
+const navMenu = document.getElementById('nav-menu');
+const closeButton = document.querySelector('.close-button');
+toggleButton.addEventListener('click', () => {
+    navMenu.classList.toggle('active');});
+
+closeButton.addEventListener('click', () => {
+    navMenu.classList.remove('active');});
+
 
 </script>
 
