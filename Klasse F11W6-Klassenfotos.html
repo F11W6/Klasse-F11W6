@@ -21,6 +21,42 @@
     animation-duration: 1s;}
     
 
+@media (max-width: 1200px) {
+    h1, h2 {
+        font-size: 30px;}}
+
+@media (max-width: 768px) {
+    .platzmacher {
+        padding-top: 100px;
+        padding-bottom: 100px;}
+    h1, h2 {
+        font-size: 24px;}
+    footer{
+        width: 80%;
+        font-size: 15px}
+    .navMenü {
+        flex-wrap: wrap;}
+    .navMenü li a {
+        font-size: 16px;}
+    .logoFW6 {
+        width: 50px;}}
+
+@media (max-width: 480px) {
+    .logoFW6 {
+        width: 50px;
+        height: 25px;}
+    h1 {
+        font-size: 24px;}
+    .navMenü {
+        flex-direction: column;
+        align-items: flex-start;}
+    .navMenü li {
+        width: 100%;}
+    .navMenü li a {
+        text-align: left;
+        padding: 10px;}}
+
+    
 html,body{
     overflow-x: hidden;}
 h1,h2,h3,h4,h5,h6{
@@ -70,7 +106,7 @@ table{
 
 <body>
 
-<ul>
+<ul class="navMenü">
     <li> <a href="https://f11w6.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
     <li> <a href="Klasse F11W6-Schüler.html">Sch&uuml;ler</a></li>
     <li> <a class="aktiv" href="Klasse F11W6-Klassenfotos.html">Klassenfotos</a></li>
