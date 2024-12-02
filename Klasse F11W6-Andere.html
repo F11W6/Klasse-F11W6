@@ -344,6 +344,16 @@ else if (count===200){document.getElementById('SatzNummer').textContent = "Als o
 else{document.getElementById("SatzNummer").textContent = "Weiter so!"}}
 
 
+
+const toggleButton = document.querySelector('.toggle-button');
+const navMenu = document.getElementById('nav-menu');
+const closeButton = document.querySelector('.close-button');
+toggleButton.addEventListener('click', () => {
+    navMenu.classList.toggle('active');});
+
+closeButton.addEventListener('click', () => {
+    navMenu.classList.remove('active');});
+
 </script>
 
 </body>
