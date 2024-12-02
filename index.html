@@ -24,7 +24,7 @@
     width: 55%;
     text-align: justify;}
 .slideContainer {
-        width: 78%;}
+    width: 78%;}
 .slideContainer, .textContainer {
     margin-top: 60px;
     margin-left: auto;
@@ -75,30 +75,31 @@
     position: fixed;
     background-color: rgb(81, 82, 83);
     animation: slideIn 0.5s ease-out forwards;}
-#Schließen{    
-    background: none;
-    border: none;
-    color: rgb(188, 173, 109);
-    font-weight: bold;
-    cursor: pointer;
-    float: right;
-    font-size: 25px;}
 .navMenü {
     display: flex;
     align-items: center;
     background-color: rgb(221, 213, 184);
     padding: 0;
     margin: 0;
-    list-style-type: none;}
+    list-style-type: none;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s ease;}
 .navMenü li {
-    display: inline-block;}
-.navMenü li a {
-    padding: 14px 16px;
     display: block;
-    color: white;
     text-align: center;
+    padding: 20px;}
+.navMenü li a {
+    color: #fff;
+    font-size: 35px;
     text-decoration: none;
-    font-size: 35px;}
+    display: block;}
 .logout-Container {
     margin-left: auto;}
 .logout {
@@ -107,13 +108,56 @@
     cursor: pointer;}
 .navMenü li a:hover {
     background-color: rgb(188, 173, 109);}
-
+.close-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;}
+.toggle-button {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 30px;
+    color: #fff;
+    background: transparent;
+    border: none;
+    z-index: 1000;}
+.toggle-container {
+    background-color: rgb(221, 213, 184);
+    padding: 10px;
+    height: 60px;
+    text-align: center;}
+.navMenü.active {
+    left: 0;}
+    
+#Schließen{    
+    background: none;
+    border: none;
+    color: rgb(188, 173, 109);
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+    font-size: 25px;}
+#Satz{
+    font-size: 50px; 
+    color: rgb(188, 173, 109); 
+    margin: 0 auto; 
+    text-align: center;}
 
 @media (max-width: 1200px) {
     .slideContainer, .textContainer {
         width: 80%;}
     h1, h2 {
-        font-size: 30px;}}
+        font-size: 30px;}
+    .toggle-button{
+        display: none;}
+    .nav-Menü{
+        display: block}}
 
 @media (max-width: 768px) {
     .platzmacher {
@@ -121,25 +165,41 @@
         padding-bottom: 100px;}
     .slideContainer{
         width: 100%;
-        top: 30px;}
+        top: 30px;
+        padding-top: 30px;
+        padding-bottom: 50px;}
     .textContainer, .slideContainer{
         margin: 0 auto;}
-    h1, h2 {
-        font-size: 24px;}
-    footer{
-        width: 80%;
-        font-size: 15px}
     #schließen{
         font-size: 20px;}
-        .navMenü {
-        flex-wrap: wrap;}
+    #Satz{
+        font-size: 27px;}
+    #Vollmenu{
+        display: none;}
+    #K11{
+        padding-bottom: 40px;}
+    .navMenü {
+        left: -100%;}
+    .toggle-button {
+        display: block;}
     .navMenü li a {
-        font-size: 16px;}
+        font-size: 30px;
+        padding: 15px;
+        width: 100%;}
     .logoFW6 {
         width: 50px;}
     .logout {
-        width: 40px;
-        height: 25px;}}
+        width: 50px;
+        height: 35px;}
+    .navMenü.active {
+        left: 0;}
+    h1, h2 {
+        font-size: 20px;}
+    footer{
+        width: 80%;
+        font-size: 15px}
+    div, p, button{
+        font-size: 17px;}}
 
 @media (max-width: 480px) {
     .logoFW6 {
@@ -151,15 +211,8 @@
     h1 {
         font-size: 24px;}
     .vor, .nach {
-        display: none;}
-    .navMenü {
-        flex-direction: column;
-        align-items: flex-start;}
-    .navMenü li {
-        width: 100%;}
-    .navMenü li a {
-        text-align: left;
-        padding: 10px;}}
+        display: none;}}
+
 
 @keyframes fade {
     from {opacity: 0;}
@@ -177,6 +230,24 @@ body{
     text-align: center;
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;}
+img{
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;}
+
+footer{
+    background-color: rgb(188, 173, 109); 
+    padding: 5px; 
+    width: 100%; 
+    font-size: 20px;
+    position: absolute;}
+hr{
+    margin-top: 70px;
+    width: 90%;
+    border-color: rgb(188, 173, 109);}
+button{
+    outline: none;}
+
 li{
     float: left;}
 li a{ 
@@ -194,27 +265,6 @@ ul{
     overflow: hidden;
     padding: 0px;
     margin: 0px;}
-
-img{
-    vertical-align: middle;
-    max-width: 100%;
-    height: auto;}
-
-footer{
-    background-color: rgb(188, 173, 109); 
-    padding: 5px; 
-    width: 100%; 
-    font-size: 20px;
-    position: absolute;}
-
-hr{
-    margin-top: 70px;
-    width: 90%;
-    border-color: rgb(188, 173, 109);}
-
-button{
-    outline: none;}
-
     
 @keyframes SlideIn {
     from{ transform: translateX(100%);
@@ -223,18 +273,30 @@ button{
             opacity: 1;}}
 
 </style>
-
-
 <body>
 
-<ul class="navMenü">
-    <li> <a class="aktiv" href="https://f11w6.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
-    <li> <a href="Klasse F11W6-Schüler.html">Sch&uuml;ler</a></li>
-    <li> <a href="Klasse F11W6-Klassenfotos.html">Klassenfotos</a></li>
-    <li> <a href="Klasse F11W6-Ausflüge.html">Ausfl&uuml;ge</a> </li>
-    <li> <a href="Klasse F11W6-Andere.html">Andere</a></li>
-    <li class="logout-Container"> <a id="ausloggenB"> <img src="Bilder F11W6/Ausloggen.png" alt="Auslog" class="logout"> </img> </a></li>
+<div class="toggle-container">
+    <button class="toggle-button">&#9776;</button>
+</div>
+<ul id="Vollmenu">
+    <li><a class="aktiv" href="https://f11w6.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
+    <li><a href="Klasse F11W6-Schüler.html">Schüler</a></li>
+    <li><a href="Klasse F11W6-Klassenfotos.html">Klassenfotos</a></li>
+    <li><a href="Klasse F11W6-Ausflüge.html">Ausflüge</a></li>
+    <li><a href="Klasse F11W6-Andere.html">Andere</a></li>
+    <li class="logout-Container"><a id="ausloggenB"><img src="Bilder F11W6/Ausloggen.png" alt="Auslog" class="logout"></a></li>
 </ul>
+
+<ul class="navMenü" id="nav-menu">
+    <li><a href="https://f11w6.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
+    <li><a href="Klasse F11W6-Schüler.html">Schüler</a></li>
+    <li><a href="Klasse F11W6-Klassenfotos.html">Klassenfotos</a></li>
+    <li><a href="Klasse F11W6-Ausflüge.html">Ausflüge</a></li>
+    <li><a href="Klasse F11W6-Andere.html">Andere</a></li>
+    <li><a id="ausloggenB"><img src="Bilder F11W6/Ausloggen.png" alt="Auslog" class="logout"></a></li>
+    <li><span class="close-button">&times;</span></li>
+</ul>
+
 
 <div class="slideContainer">
 
@@ -259,7 +321,7 @@ button{
 
 </div>
 
-<h1>Klasse F11W6</h1>
+<h1 id="K11">Klasse F11W6</h1>
 
 <hr>
 
@@ -270,7 +332,7 @@ button{
 <p style="margin-left: 20px; font-size: 65px; color: rgb(188, 173, 109); font-family: 'Courier New'" id="Willkommen"></p> 
 </div>
 <div class="textContainer">
-<p style="font-size: 50px; color: rgb(188, 173, 109); margin: 0 auto; text-align: center"  id="Satz"></p>
+<p  id="Satz"></p>
 </div>
 <br>
 <button class="SatzZufall" id="SatzZufall">Zufälliger Satz</button>
@@ -376,11 +438,20 @@ function Cookies(){
     localStorage.setItem("buttonPressed", "true");}
 
 
+const toggleButton = document.querySelector('.toggle-button');
+const navMenu = document.getElementById('nav-menu');
+const closeButton = document.querySelector('.close-button');
+toggleButton.addEventListener('click', () => {
+    navMenu.classList.toggle('active');});
+
+closeButton.addEventListener('click', () => {
+    navMenu.classList.remove('active');});
+
+
 window.onload = function() {
     slideIndex = 1;
     startSlideShow();
     SatzHallo();
-    blockMobileAccess();
     if (localStorage.getItem("buttonPressed") === "true") {
         document.getElementById("Meldung").style.display = "none";
     } else {
@@ -389,23 +460,7 @@ window.onload = function() {
 
 document.getElementById("Schließen").addEventListener("click", function() { Cookies(); });
 
-function blockMobileAccess() {
-    const mobileRegex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
-    if (mobileRegex.test(navigator.userAgent)) {
-        document.body.innerHTML = `
-            <div style="text-align: center; margin-top: 20%; font-family: Arial, sans-serif;">
-                <h1>Zugriff verweigert</h1>
-                <p>Der Zugriff auf diese Seite ist von Mobilgeräten nicht erlaubt, versuche es auf Ipads oder Computer. 
-                <br>(Juan arbeitet schon daran)</p>
-            </div>`;
-        document.body.style.backgroundColor = "#f8d7da";
-        document.body.style.color = "#721c24";}}
-
-
-
 </script>
 </body>
-
-</html>
 
 </html>
