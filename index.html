@@ -465,8 +465,9 @@ table{
     <button id="Schließen"> x </button>
 </div>
 
-<audio autoplay loop muted id="background-audio">
-    <source src="Bilder F11W6/Die With A Smile (Instrumental).mp4" type="audio/mp4">
+<audio loop id="background-audio">
+<source src="Bilder F11W6/Die With A Smile (Instrumental).mp4" type="audio/mp4">
+        Dein Browser unterstützt das Audio-Element nicht.
 </audio>
 
 <footer>
@@ -483,8 +484,9 @@ const Saetze = ["Ich hoffe es geht dir gut :)", "Hinweis: Wer Gänsehaut, schlä
 let SatzRandom = ""
 
 const audio = document.getElementById("background-audio");
-    audio.volume = 0.5;
-    setTimeout(() => audio.muted = false, 1000);
+        audio.volume = 0.5; 
+        document.body.addEventListener('click', () => {
+            audio.play();});
 
 function showSlides() {
     let i;
