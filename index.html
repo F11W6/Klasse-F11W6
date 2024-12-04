@@ -3,7 +3,7 @@
 <head>
     <title>Klasse F11W6</title>
     <link rel="icon" href="Bilder F11W6/F11W6.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0" charset="UTF-8">
 </head>
 <style>
 
@@ -45,12 +45,12 @@
     left: 10px;}
 .nach {
     right: 10px;}
-.vor:hover, .nach:hover {
+.vor:hover, .nach:hover{
     background-color: rgb(81, 82, 83)}
-.fade {
+.fade{
     animation-name: fade;
     animation-duration: 2s;}
-.inline-container {
+.inline-container{
     display: flex;
     align-items: center;
     justify-content: center;}
@@ -75,7 +75,7 @@
     position: fixed;
     background-color: rgb(81, 82, 83);
     animation: slideIn 0.5s ease-out forwards;}
-.navMenü {
+.navMenü{
     display: flex;
     align-items: center;
     background-color: rgb(221, 213, 184);
@@ -92,9 +92,11 @@
     justify-content: center;
     transition: 0.3s ease;}
 .navMenü li {
-    display: block;
+    display: inline-block;
     text-align: center;
-    padding: 20px;}
+    padding: 20px;
+    border: 1px solid rgb(188, 173, 109);
+    width: 100%;}
 .navMenü li a {
     color: #fff;
     font-size: 35px;
@@ -106,7 +108,7 @@
     width: 53px;
     height: 34px;
     cursor: pointer;}
-.navMenü li a:hover {
+.navMenü li:hover {
     background-color: rgb(188, 173, 109);}
 .close-button {
     position: absolute;
@@ -131,6 +133,10 @@
     display: none;}
 .navMenü.active {
     left: 0;}
+.TabelleContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;}
     
 #Schließen{    
     background: none;
@@ -148,6 +154,8 @@
 #CookiesText{
     width: 90%; 
     margin: 0px auto;}
+#Jahrgangsstufe{
+        display: none;}
 
 @media (max-width: 1200px) {
     .slideContainer, .textContainer {
@@ -157,7 +165,12 @@
     .toggle-button{
         display: none;}
     .nav-Menü{
-        display: block}}
+        display: block}
+th{
+    width: 50%;
+    padding: 50px 10px;
+    border-right: 2px solid rgb(188, 173, 109)}
+    }
 
 @media (max-width: 768px) {
     .platzmacher {
@@ -165,9 +178,8 @@
         padding-bottom: 100px;}
     .slideContainer{
         width: 100%;
-        top: 30px;
-        padding-top: 30px;
-        padding-bottom: 50px;}
+        padding-top: 0px;
+        padding-bottom: 10px;}
     .textContainer, .slideContainer{
         margin: 0 auto;}
     #schließen{
@@ -178,6 +190,8 @@
         display: none;}
     #K11{
         padding-bottom: 40px;}
+    #Jahrgangsstufe{
+        display: block;}
     .navMenü {
         left: -100%;}
     .toggle-button {
@@ -193,6 +207,12 @@
         height: 35px;}
     .navMenü.active {
         left: 0;}
+    .logoFW6Static{
+        position: absolute;
+        z-index: 1;
+        left: 5%;
+        top: 25px;
+        width: 70px;}
     #CookiesText{
         width: 80%;
         font-size: 15px; 
@@ -201,11 +221,11 @@
         width: 70%;}
     .toggle-container {
         display: block;
-        background-color: rgb(221, 213, 184);
+        background-color: rgb(202, 192, 148);
         padding: 10px;
         height: 60px;
         text-align: center;}
-    h1, h2{
+    h1, h2, h4{
         font-size: 20px;}
     h3{
         font-size: 15px;}
@@ -213,7 +233,11 @@
         width: 80%;
         font-size: 15px}
     div, p, button{
-        font-size: 17px;}}
+        font-size: 17px;}
+    th{
+        font-size: 15px;
+        max-width: 60%;
+        padding: 25px 5px;}}
 
 @media (max-width: 480px) {
     .logoFW6 {
@@ -279,7 +303,20 @@ ul{
     overflow: hidden;
     padding: 0px;
     margin: 0px;}
-    
+th{
+    width: 50%;
+    padding: 50px 10px;
+    border-right: 2px solid rgb(188, 173, 109)}
+tr{
+    border-bottom: 2px solid rgb(188, 173, 109);}
+table{
+    width: 80%;
+    position: flex;
+    left: 50%;
+    border-collapse: collapse;
+    justify-content: center};
+
+
 @keyframes SlideIn {
     from{ transform: translateX(100%);
             opacity: 0;}
@@ -291,6 +328,7 @@ ul{
 
 <div class="toggle-container">
     <button class="toggle-button">&#9776;</button>
+    <img class="logoFW6Static" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo">
 </div>
 <ul id="Vollmenu">
     <li><a class="aktiv" href="https://f11w6.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
@@ -302,13 +340,12 @@ ul{
 </ul>
 
 <ul class="navMenü" id="nav-menu">
-    <li><a href="https://f11w6.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
+    <li class="aktiv"><a href="https://f11w6.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
     <li><a href="Klasse F11W6-Schüler.html">Schüler</a></li>
     <li><a href="Klasse F11W6-Klassenfotos.html">Klassenfotos</a></li>
     <li><a href="Klasse F11W6-Ausflüge.html">Ausflüge</a></li>
     <li><a href="Klasse F11W6-Andere.html">Andere</a></li>
     <li><a id="ausloggenB2"><img src="Bilder F11W6/Ausloggen.png" alt="Auslog" class="logout"></a></li>
-    <li><span class="close-button">&times;</span></li>
 </ul>
 
 
@@ -337,6 +374,8 @@ ul{
 
 <h1 id="K11">Klasse F11W6</h1>
 
+<p style="font-size: 40px;" id="Jahrgangsstufe"> <span style="color: rgb(188, 173, 109);">~</span> 2024/2025 <span style="color: rgb(188, 173, 109);">~</span></p>
+
 <hr>
 
 <br><br>
@@ -363,8 +402,58 @@ ul{
 </div>
 <br><br><br>
 <hr>
+<br><br>
+
+<h4>Unsere <span style="color: rgb(188, 173, 109);">Stars</span></h4>
+
+<div class="TabelleContainer">
+<table>
+    <tr>
+        <th class="THText">📢1.Klassensprecher❄️</th>
+        <th>Juan Cáceres</th>
+    </tr>
+    <tr>
+        <th class="THText">📢2.Klassensprecherin🌸</th>
+        <th>Chiara Barresi</th>
+    </tr>
+    <tr>
+        <th class="THText">🏆Klassenbeste/r🏆</th>
+        <th>Wer hat die besten Noten?</th>
+    </tr>
+    <tr>
+        <th class="THText">🤓Hausaufgaben-Champion🤓</th>
+        <th>Wer ist immer vorbereitet und fleißig?</th>
+    </tr>
+    <tr>
+        <th class="THText">🧠Problemlöser/in🧠</th>
+        <th>Wer ist am besten darin, schwierige Aufgaben zu meistern?</th>
+    </tr>
+    <tr>
+        <th class="THText">💡Kreativster Kopf💡</th>
+        <th>Wer überrascht immer mit kreativen Ideen oder Lösungen?</th>
+    </tr>
+    <tr>
+        <th class="THText">🎉Stimmungsmacher/in🎉</th>
+        <th>Wer bringt alle zum Lachen?</th>
+    </tr>
+    <tr>
+        <th class="THText">🤗Verlässlichste Person🤗</th>
+        <th>Auf wen kann man sich immer verlassen?</th>
+    </tr>
+    <tr>
+        <th class="THText">🌟Am Beliebtesten🌟</th>
+        <th>Wer ist der oder die Liebling der Klasse?</th>
+    </tr>
+
+</table>
+</div>
+
+<hr>
+<br><br>
 
 
+
+<hr>
 <div id="Meldung" class="CookiesBlock">
     <h3 style="font-size: 15px;">Diese Seite nutzt Cookies</h3>
     <p id="CookiesText">Diese Seite speichert nur deinen Namen, damit du dich beim nächsten Mal nicht erneut anmelden musst, es sei denn, du meldest dich ab. Ja, das war's :)</p>
@@ -459,8 +548,7 @@ const closeButton = document.querySelector('.close-button');
 toggleButton.addEventListener('click', () => {
     navMenu.classList.toggle('active');});
 
-closeButton.addEventListener('click', () => {
-    navMenu.classList.remove('active');});
+
 
 
 window.onload = function() {
