@@ -465,7 +465,7 @@ table{
     <button id="Schließen"> x </button>
 </div>
 
-<audio autoplay loop muted>
+<audio autoplay loop muted id="background-audio">
     <source src="Bilder F11W6/Die With A Smile (Instrumental).mp4" type="audio/mp4">
 </audio>
 
@@ -482,8 +482,9 @@ let html = document.getElementById("Klasse11W6")
 const Saetze = ["Ich hoffe es geht dir gut :)", "Hinweis: Wer Gänsehaut, schlägt auch Enten :(", "Ich wünsche dir ne schöne Woche", "hahaha, hey schön das du da bist... HOLT MICH HIER RAUS", "Hinweis: Ich werde nicht bezahlt, hilfe", "Hinweis: 8 Stunden schlaft tut gut", "Ich schlafe nicht und bin Kühlschrank wie ein frisch ... eh?", "Warum liegt hier Stroh?", "Messi auf die 1", "Cristiano auf die 1", "Hinweis: 1/2 Ente + 1/2 Ente = 1 Ganz","Hinweis: Sei im Unterricht aufmerksam", "Hinweis: 1 + 1 = 11", "Welche Zeitform ist: Der Busfahrer war pünktlich gewesen.? Bus-quam-Perfekt","Hinweis: ein Tag ohne Lächeln ist ein verlorener Tag","Was ist orange und läuft durch den Wald? Eine Wanderine! hahaha...","Hinweis: Auf dem Stundenplan steht heute kein Unterricht, sondern einfach nur Fun!","Hinweis: Die Cookies sind keine Kekse :(","Ich kann dir alles erklären, aber nicht die Mathehausaufgaben!","Bist du die Skyline meiner Stadt? Denn du lässt mein Herz höher schlagen!","Bist du etwa ein Quadrat in meiner linearen Gleichung, oder warum fühle ich mich ohne dich so irrational?🧐🍷","Wenn ich deine Hardware sehe, wird meine Software kalt","Es leuchten wieder die Weihnachtskerzen und zaubern Freude in alle Herzen","Hinweis: Auch kleine Imperfektionen gehören zu einem Meisterwerk","Hinweis: Die Reise ist das Ziel, Schritt für Schritt entsteht Großes","Hinweis: Träume groß, arbeite hart und genieße jeden Erfolg, egal wie klein er scheint","Entschuldige die schlechten Witze, aber das Budget ist leider nicht ausreichend...","KIs werden nicht bezahlt :(","Hinweis: Schlafe im Unterricht nicht ein, man weiß nie, wann deine Mitschüler dir Wasser auf den Rücken schütten werden.💧","Klasse F11W6 auf die 1!"]
 let SatzRandom = ""
 
-const audio = document.querySelector("audio");
+const audio = document.getElementById("background-audio");
     audio.volume = 0.5;
+    setTimeout(() => audio.muted = false, 1000);
 
 function showSlides() {
     let i;
