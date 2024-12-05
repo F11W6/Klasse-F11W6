@@ -6,84 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
 </head>
 <style>
+
 .platzmacher {
     padding-top: 200px;
     padding-bottom: 200px;}
 .logoFW6 {
     width: 65px;
     height: 31px;}
-.Hauptbild {
-    height: auto;
-    width: 80%;}
 .aktiv {
     background-color: rgb(188, 173, 109);}
-.slideshow {
-    display: none;}
-.textContainer {
-    width: 55%;
-    text-align: justify;}
-.slideContainer {
-    width: 78%;}
-.slideContainer, .textContainer {
-    margin-top: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;}
-.vor, .nach {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    color: rgb(188, 173, 109);
-    border-radius: 3px;
-    font-size: 18px;
-    user-select: none;
-    transform: translateY(-50%);}
-.vor {
-    left: 10px;}
-.nach {
-    right: 10px;}
-.vor:hover, .nach:hover {
-    background-color: rgb(81, 82, 83)}
 .fade {
     animation-name: fade;
     animation-duration: 2s;}
-.inline-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;}
-.SatzZufall{
-    border: 2px solid transparent ;
-    border-radius: 10px;
-    background-color: rgb(221, 213, 184);
-    font-size: 25px;
-    color: white;}
-.SatzZufall:hover{ 
-    background-color: rgb(188, 173, 109);}
-.CookiesBlock{
-    height: auto;
-    width: 18%;
-    z-index: 1;
-    display: block;
-    left: 0px;
-    bottom: 0px;
-    font-size: 12px;
-    border: 2px solid;
-    border-color: rgba(188, 173, 109, 0.9);
-    position: fixed;
-    background-color: rgb(81, 82, 83);
-    animation: slideIn 0.5s ease-out forwards;}
-.navMenü {
+
+.navMenü{
     display: flex;
     align-items: center;
     background-color: rgb(221, 213, 184);
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     list-style-type: none;
     position: absolute;
     z-index: 10;
-    top: 0;
+    top: 0px;
     left: -100%;
     width: 100%;
     height: 100vh;
@@ -91,22 +36,34 @@
     justify-content: center;
     transition: 0.3s ease;}
 .navMenü li {
-    display: block;
-    text-align: center;
-    padding: 20px;}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid rgb(188, 173, 109);
+    width: 100%;}
 .navMenü li a {
     color: #fff;
     font-size: 35px;
     text-decoration: none;
-    display: block;}
-.logout-Container {
-    margin-left: auto;}
-.logout {
-    width: 53px;
-    height: 34px;
-    cursor: pointer;}
-.navMenü li a:hover {
+    display: block;
+    height: 25vh;
+    text-align: center}
+.navMenü li:hover {
     background-color: rgb(188, 173, 109);}
+#Vollmenu {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    background-color: rgb(221, 213, 184);
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    width: 100%;}
+#Vollmenu li {
+    list-style: none;
+    display: inline-block;}
+
 .close-button {
     position: absolute;
     top: 20px;
@@ -130,27 +87,9 @@
     display: none;}
 .navMenü.active {
     left: 0;}
-    
-#Schließen{    
-    background: none;
-    border: none;
-    color: rgb(188, 173, 109);
-    font-weight: bold;
-    cursor: pointer;
-    float: right;
-    font-size: 25px;}
-#Satz{
-    font-size: 50px; 
-    color: rgb(188, 173, 109); 
-    margin: 0 auto; 
-    text-align: center;}
-#CookiesText{
-    width: 90%; 
-    margin: 0px auto;}
+
 
 @media (max-width: 1200px) {
-    .slideContainer, .textContainer {
-        width: 80%;}
     h1, h2 {
         font-size: 30px;}
     .toggle-button{
@@ -158,53 +97,38 @@
     .nav-Menü{
         display: block}}
 
-@media (max-width: 768px) {
+        @media (max-width: 768px) {
     .platzmacher {
         padding-top: 100px;
         padding-bottom: 100px;}
-    .slideContainer{
-        width: 100%;
-        top: 30px;
-        padding-top: 30px;
-        padding-bottom: 50px;}
-    .textContainer, .slideContainer{
-        margin: 0 auto;}
-    #schließen{
-        font-size: 20px;}
-    #Satz{
-        font-size: 27px;}
     #Vollmenu{
         display: none;}
-    #K11{
-        padding-bottom: 40px;}
     .navMenü {
         left: -100%;}
     .toggle-button {
         display: block;}
     .navMenü li a {
         font-size: 30px;
-        padding: 15px;
-        width: 100%;}
+        width: 100%;
+        height: 25vh;
+        max-height: 60px;}
     .logoFW6 {
         width: 50px;}
-    .logout {
-        width: 50px;
-        height: 35px;}
     .navMenü.active {
         left: 0;}
-    #CookiesText{
-        width: 0%;
-        font-size: 15px; 
-        margin: 0px auto}
-    .CookiesBlock{
-        width: 70%;}
-        .toggle-container {
+    .logoFW6Static{
+        position: absolute;
+        z-index: 1;
+        left: 5%;
+        top: 25px;
+        width: 70px;}
+    .toggle-container {
         display: block;
-        background-color: rgb(221, 213, 184);
+        background-color: rgb(202, 192, 148);
         padding: 10px;
         height: 60px;
         text-align: center;}
-    h1, h2{
+    h1, h2, h4{
         font-size: 20px;}
     h3{
         font-size: 15px;}
@@ -212,7 +136,11 @@
         width: 80%;
         font-size: 15px}
     div, p, button{
-        font-size: 17px;}}
+        font-size: 17px;}
+    th{
+        font-size: 15px;
+        max-width: 60%;
+        padding: 25px 5px;}}
 
 @media (max-width: 480px) {
     .logoFW6 {
@@ -285,6 +213,7 @@ ul{
 
 <div class="toggle-container">
     <button class="toggle-button">&#9776;</button>
+    <img class="logoFW6Static" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo">
 </div>
 <ul id="Vollmenu">
     <li><a href="https://f11w6.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
@@ -293,14 +222,13 @@ ul{
     <li><a href="Klasse F11W6-Ausflüge.html">Ausflüge</a></li>
     <li><a href="Klasse F11W6-Andere.html">Andere</a></li>
 </ul>
-        
+    
 <ul class="navMenü" id="nav-menu">
     <li><a href="https://f11w6.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
     <li><a href="Klasse F11W6-Schüler.html">Schüler</a></li>
-    <li><a href="Klasse F11W6-Klassenfotos.html">Klassenfotos</a></li>
+    <li class="aktiv"><a href="Klasse F11W6-Klassenfotos.html">Klassenfotos</a></li>
     <li><a href="Klasse F11W6-Ausflüge.html">Ausflüge</a></li>
     <li><a href="Klasse F11W6-Andere.html">Andere</a></li>
-<li><span class="close-button">&times;</span></li>
 </ul>
 
 <h1>Klassenfotos 2024/2025</h1>
@@ -312,12 +240,10 @@ ul{
 <p>WIR ARBEITEN NOCH DARAN :)</p>
 </Table>
 <br>
+<hr>
 <br>
 <br>
-<br>
-
-
-
+<p>  (~￣³￣)~ 🎄</p>
 
 <hr>
 <footer>
