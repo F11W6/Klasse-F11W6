@@ -4,7 +4,6 @@
     <title>Klasse F11W6 Ausfl&uuml;ge</title>
     <link rel="icon" href="Bilder F11W6/F11W6.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
-    <link rel="stylesheet" href="port.css"> 
 </head>
 <style>
 .platzmacher{
@@ -93,7 +92,11 @@
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;}
-.navMenü {
+  #kleinA{
+    display: none;}
+
+
+  .navMenü{
     display: flex;
     align-items: center;
     background-color: rgb(221, 213, 184);
@@ -107,32 +110,35 @@
     width: 100%;
     height: 100vh;
     flex-direction: column;
-    justify-content: center;
     transition: 0.3s ease;}
 .navMenü li {
-    display: block;
-    text-align: center;
-    padding: 20px;}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3.3vh;
+    border: 1px solid rgb(188, 173, 109);
+    height: 25vh;
+    width: 100vh;}
 .navMenü li a {
     color: #fff;
     font-size: 35px;
     text-decoration: none;
-    display: block;}
-.logout-Container {
-    margin-left: auto;}
-.logout {
-    width: 53px;
-    height: 34px;
-    cursor: pointer;}
-.navMenü li a:hover {
+    display: block;
+    height: 20vh;
+    text-align: center;}
+.navMenü li:hover {
     background-color: rgb(188, 173, 109);}
-.close-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 40px;
-    color: #fff;
-    cursor: pointer;}
+#Vollmenu {
+    display: flex;
+    align-items: center;
+    background-color: rgb(221, 213, 184);
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    width: 100%;}
+#Vollmenu li {
+    list-style: none;
+    display: inline-block;}
 .toggle-button {
     display: none;
     position: absolute;
@@ -149,6 +155,92 @@
     display: none;}
 .navMenü.active {
     left: 0;}
+#Bildkarte-klein{
+    display: none;}
+
+@media (max-width: 1200px) {
+    h1, h2 {
+        font-size: 30px;}
+    .toggle-button{
+        display: none;}
+    .nav-Menü{
+        display: block}}
+
+@media (max-width: 768px) {
+    .platzmacher {
+        padding-top: 100px;
+        padding-bottom: 100px;}
+    #Vollmenu{
+        display: none;}
+    .navMenü {
+        left: -100%;}
+    .toggle-button {
+        display: block;}
+    .navMenü li a {
+        font-size: 30px;
+        padding: 15px;
+        width: 100%;
+        height: 20vh;
+        max-height: 35px;}
+    .logoFW6 {
+        width: 50px;}
+    .navMenü.active {
+        left: 0;}
+    .logoFW6Static{
+        position: absolute;
+        z-index: 1;
+        left: 5%;
+        top: 25px;
+        width: 70px;}
+    .toggle-container {
+        display: block;
+        background-color: rgb(202, 192, 148);
+        padding: 10px;
+        height: 60px;
+        text-align: center;}
+    .Karte{
+        display: none;}
+    .kleinA{
+        display: block;}
+    .Notizbuch{ 
+        position: absolute;
+        top: 450px;
+        left: 0px; 
+        width: 350px; 
+        height: 350px;}
+    .vor, .nach {
+        display: none;}
+    .infoText{
+        font-size: 16px; 
+        width: 235px; 
+        height: 400px;
+        top: 510px;
+        left: 50px;}
+    .ButtonInfoText{
+        height: 60px;
+        width: 170px;
+        font-size: 35px;
+        left: 105px;
+        top: 800px;}
+    #Trennung{
+        margin-top: 800px;}
+    #Bildkarte-klein{
+        display: block;
+        position: absolute;
+        left: 20px;}
+    h1, h2, h4{
+        font-size: 25px;}
+    h3{
+        font-size: 15px;}
+    footer{
+        width: 80%;
+        font-size: 15px}
+    div, p, button{
+        font-size: 17px;}
+    th{
+        font-size: 15px;
+        max-width: 60%;
+        padding: 25px 5px;}}
 
 
 html,body{
@@ -206,6 +298,7 @@ button:hover{
 
 <div class="toggle-container">
     <button class="toggle-button">&#9776;</button>
+    <img class="logoFW6Static" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo">
 </div>
 <ul id="Vollmenu">
     <li><a href="https://f11w6.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
@@ -214,7 +307,7 @@ button:hover{
     <li><a class="aktiv" href="Klasse F11W6-Ausflüge.html">Ausflüge</a></li>
     <li><a href="Klasse F11W6-Andere.html">Andere</a></li>
 </ul>
-
+    
 <ul class="navMenü" id="nav-menu">
     <li><a href="https://f11w6.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
     <li><a href="Klasse F11W6-Schüler.html">Schüler</a></li>
@@ -225,19 +318,20 @@ button:hover{
 
 <h1>Ausfl&uuml;ge 2024/2025</h1>
 
+<img id="Bildkarte-klein" src="Bilder F11W6/Ausfluege-removebg-preview 2.png" usemap="#image-map">
 
-
-
-
-
+<map name="image-map" id="kleinA">
+    <area target="" id="GerichtK" alt="Gericht-klein" title="Gericht klein" coords="154,217,170,234" shape="rect">
+    <area target="" id="SchlierseeK" alt="Schliersee-klein" title="Schliersee klein" coords="171,238,185,256" shape="rect">
+</map>
 
 <img class="Notizbuch" id= "Notizbuch" src="Bilder F11W6/Notizbuch2.png" alt="Notizbuch" style="visibility: hidden;">
 
-<img id="Bildkarte" class="Karte" src="Bilder F11W6/Ausfluege-removebg-preview.png" usemap="#image-map">
+<img id="Bildkarte" class="Karte" src="Bilder F11W6/Ausfluege-removebg-preview.png" usemap="#image-map2">
 
-<map name="image-map" id="VollArea">
-    <area target="" id="Gericht" alt="Gericht2025" title="Gericht" coords="256,355,275,382" shape="rect">
-    <area target="" id="Schliersee" alt="Schliersee2024" title="Schliersee" coords="281,390,300,417" shape="rect">
+<map name="image-map2">
+    <area target="" id="Gericht" alt="Gericht-2025" title="Gericht2025" coords="254,355,277,383" shape="rect">
+    <area target="" id="Schliersee" alt="Schliersee-2024" title="Schliersee2024" coords="278,390,301,418" shape="rect">
 </map>
 
 <p class="infoText" id="Info1">Schliersee: <br>Am 23.09.2024 starteten wir um 9:28 Uhr, obwohl viele Sch&uuml;ler aufgrund von Problemen mit der S-Bahn versp&auml;tet eintrafen. Wir trafen uns schlie&szlig;lich mit der Klasse F11W4 an der Donnersberger Br&uuml;cke. Nach etwa 50 Minuten erreichten wir die Bahnstation in Schliersee. </p>
@@ -259,7 +353,7 @@ button:hover{
     
 <button id="Weiter" style="visibility: hidden" class="ButtonInfoText"> weiter </button>
 
-<hr>
+<hr id="Trennung">
 <br>
 <h2>"Erinnerungen"</h2>
 
@@ -275,7 +369,7 @@ button:hover{
     
     <div class="mySlides fade">
       <div class="numbertext">2 / 3</div>
-      <img src="Bilder F11W6/Schliersee-Baum.jpg" style="width:50%;">
+      <img src="Bilder F11W6/Schliersee-Baum.jpg" style="width:70%;">
       <div class="text"> </div>
     </div>
     
@@ -431,8 +525,11 @@ function weitergehts() {
             break;}}
 
 document.getElementById("Schliersee").addEventListener("click", function () {Erscheinen();});
+document.getElementById("SchlierseeK").addEventListener("click", function () {Erscheinen();});
 
 document.getElementById("Gericht").addEventListener("click", function () {GerichtAnzeigen();});
+document.getElementById("GerichtK").addEventListener("click", function () {GerichtAnzeigen();});
+
 
 document.getElementById("Weiter").addEventListener("click", function () {weitergehts();});
 
@@ -442,8 +539,6 @@ const closeButton = document.querySelector('.close-button');
 toggleButton.addEventListener('click', () => {
     navMenu.classList.toggle('active');});
 
-closeButton.addEventListener('click', () => {
-    navMenu.classList.remove('active');});
 
 
 </script>
