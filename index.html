@@ -4,7 +4,6 @@
     <title>Klasse F11W6</title>
     <link rel="icon" href="Bilder F11W6/F11W6.png">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0" charset="UTF-8">
-    <link rel="stylesheet" href="port.css">
 </head>
 <style>
 
@@ -13,7 +12,7 @@
     padding-bottom: 200px;}
 .logoFW6 {
     width: 65px;
-    height: 34px;}
+    height: 31px;}
 .Hauptbild {
     height: auto;
     width: 80%;}
@@ -104,26 +103,11 @@
     text-decoration: none;
     display: block;
     height: 20vh;}
-#Vollmenu{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgb(221, 213, 184);
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    width: 100%;}
-#Vollmenu li {
-    list-style: none;
-    display: inline-block;}
-#Vollmenu ul{
-    display: flex; width: 100%;}
-.logout-Container{
+.logout-Container {
     margin-left: auto;}
-.logout{
+.logout {
     width: 53px;
-    height: 40px;
-    margin-top: -5px;
+    height: 34px;
     cursor: pointer;}
 .navMenü li:hover {
     background-color: rgb(188, 173, 109);}
@@ -147,7 +131,8 @@
     border: none;
     z-index: 1000;}
 .toggle-container {
-    display: none;}
+    display: none;
+z-index: 1;}
 .navMenü.active {
     left: 0;}
 .TabelleContainer{
@@ -174,7 +159,111 @@
 #Jahrgangsstufe{
     display: none;}
 #F11W6Eig{
-    width: 30%;}
+    width: 30%;
+}
+
+@media (max-width: 1200px) {
+    .slideContainer, .textContainer {
+        width: 80%;}
+    h1, h2 {
+        font-size: 30px;}
+    .toggle-button{
+        display: none;}
+    .nav-Menü{
+        display: block}
+th{
+    width: 50%;
+    padding: 50px 10px;
+    border-right: 2px solid rgb(188, 173, 109)}
+    }
+
+@media (max-width: 768px) {
+    .platzmacher {
+        padding-top: 100px;
+        padding-bottom: 100px;}
+    .slideContainer{
+        width: 100%;
+        padding-top: 0px;
+        padding-bottom: 10px;}
+    .textContainer, .slideContainer{
+        margin: 0 auto;}
+    #schließen{
+        font-size: 20px;}
+    #Satz{
+        font-size: 27px;}
+    #Vollmenu{
+        display: none;}
+    #K11{
+        padding-bottom: 40px;}
+    #Jahrgangsstufe{
+        display: block;}
+    #F11W6Eig{
+        width: 80%;}
+    .navMenü {
+        left: -100%;}
+    .toggle-button {
+        display: block;}
+    .navMenü li a {
+        font-size: 30px;
+        padding: 15px;
+        width: 100%;
+        height: 20vh;
+        max-height: 35px;}
+    .logoFW6 {
+        width: 50px;}
+    .logout {
+        width: 50px;
+        height: 35px;}
+    .navMenü.active {
+        left: 0;}
+    .logoFW6Static{
+        position: absolute;
+        z-index: 1;
+        left: 5%;
+        top: 25px;
+        width: 70px;}
+    #CookiesText{
+        width: 80%;
+        font-size: 15px; 
+        margin: 0px auto}
+    .CookiesBlock{
+        width: 70%;}
+    .toggle-container {
+        display: block;
+        background-color: rgb(202, 192, 148);
+        padding: 10px;
+        height: 60px;
+        text-align: center;}
+    h1, h2, h4{
+        font-size: 20px;}
+    h3{
+        font-size: 15px;}
+    footer{
+        width: 80%;
+        font-size: 15px}
+    div, p, button{
+        font-size: 17px;}
+    th{
+        font-size: 15px;
+        max-width: 60%;
+        padding: 25px 5px;}}
+
+@media (max-width: 480px) {
+    .logoFW6 {
+        width: 50px;
+        height: 25px;}
+    .Hauptbild {
+        width: 100%;
+        height: auto;}
+    h1 {
+        font-size: 24px;}
+    .vor, .nach {
+        display: none;}}
+
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}}
 
 
 html,body{
@@ -214,7 +303,7 @@ li a{
     color: white;
     text-align: center;
     text-decoration: none;
-    font-size: 40px;}
+    font-size: 35px;}
 li a:hover{
     background-color: rgb(188, 173, 109);}
 ul{
