@@ -4,7 +4,7 @@
     <title>Klasse F11W6 Andere</title>
     <link rel="icon" href="Bilder F11W6/F11W6.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
-    <link rel="stylesheet" href="Port.css"> 
+    <link rel="stylesheet" href="port.css"> 
 </head>
 <style>
 
@@ -19,64 +19,9 @@
     width: 80%;}
 .aktiv {
     background-color: rgb(188, 173, 109);}
-.slideshow {
-    display: none;}
-.textContainer {
-    width: 55%;
-    text-align: justify;}
-.slideContainer {
-    width: 78%;}
-.slideContainer, .textContainer {
-    margin-top: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;}
-.vor, .nach {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    color: rgb(188, 173, 109);
-    border-radius: 3px;
-    font-size: 18px;
-    user-select: none;
-    transform: translateY(-50%);}
-.vor {
-    left: 10px;}
-.nach {
-    right: 10px;}
-.vor:hover, .nach:hover {
-    background-color: rgb(81, 82, 83)}
-.fade {
-    animation-name: fade;
-    animation-duration: 2s;}
-.inline-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;}
-.SatzZufall{
-    border: 2px solid transparent ;
-    border-radius: 10px;
-    background-color: rgb(221, 213, 184);
-    font-size: 25px;
-    color: white;}
-.SatzZufall:hover{ 
-    background-color: rgb(188, 173, 109);}
-.CookiesBlock{
-    height: auto;
-    width: 18%;
-    z-index: 1;
-    display: block;
-    left: 0px;
-    bottom: 0px;
-    font-size: 12px;
-    border: 2px solid;
-    border-color: rgba(188, 173, 109, 0.9);
-    position: fixed;
-    background-color: rgb(81, 82, 83);
-    animation: slideIn 0.5s ease-out forwards;}
-.navMenü {
+
+
+.navMenü{
     display: flex;
     align-items: center;
     background-color: rgb(221, 213, 184);
@@ -90,32 +35,35 @@
     width: 100%;
     height: 100vh;
     flex-direction: column;
-    justify-content: center;
     transition: 0.3s ease;}
 .navMenü li {
-    display: block;
-    text-align: center;
-    padding: 20px;}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3.3vh;
+    border: 1px solid rgb(188, 173, 109);
+    height: 25vh;
+    width: 100vh;}
 .navMenü li a {
     color: #fff;
     font-size: 35px;
     text-decoration: none;
-    display: block;}
-.logout-Container {
-    margin-left: auto;}
-.logout {
-    width: 53px;
-    height: 34px;
-    cursor: pointer;}
-.navMenü li a:hover {
+    display: block;
+    height: 20vh;
+    text-align: center;}
+.navMenü li:hover {
     background-color: rgb(188, 173, 109);}
-.close-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 40px;
-    color: #fff;
-    cursor: pointer;}
+#Vollmenu {
+    display: flex;
+    align-items: center;
+    background-color: rgb(221, 213, 184);
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    width: 100%;}
+#Vollmenu li {
+    list-style: none;
+    display: inline-block;}
 .toggle-button {
     display: none;
     position: absolute;
@@ -132,23 +80,65 @@
     display: none;}
 .navMenü.active {
     left: 0;}
-    
-#Schließen{    
-    background: none;
-    border: none;
+#Bildkarte-klein{
+    display: none;}
+#counter{
     color: rgb(188, 173, 109);
-    font-weight: bold;
-    cursor: pointer;
-    float: right;
-    font-size: 25px;}
-#Satz{
-    font-size: 50px; 
-    color: rgb(188, 173, 109); 
-    margin: 0 auto; 
-    text-align: center;}
-#CookiesText{
-    width: 90%; 
-    margin: 0px auto;}
+}
+
+@media (max-width: 1200px) {
+    h1, h2 {
+        font-size: 30px;}
+    .toggle-button{
+        display: none;}
+    .nav-Menü{
+        display: block}}
+
+@media (max-width: 768px) {
+    .platzmacher {
+        padding-top: 100px;
+        padding-bottom: 100px;}
+    #Vollmenu{
+        display: none;}
+    .navMenü {
+        left: -100%;}
+    .toggle-button {
+        display: block;}
+    .navMenü li a {
+        font-size: 30px;
+        padding: 15px;
+        width: 100%;
+        height: 20vh;
+        max-height: 35px;}
+    .logoFW6 {
+        width: 50px;}
+    .navMenü.active {
+        left: 0;}
+    .logoFW6Static{
+        position: absolute;
+        z-index: 1;
+        left: 5%;
+        top: 25px;
+        width: 70px;}
+    .toggle-container {
+        display: block;
+        background-color: rgb(202, 192, 148);
+        padding: 10px;
+        height: 60px;
+        text-align: center;}
+    h1, h2, h4{
+        font-size: 25px !important;}
+    h3{
+        font-size: 15px;}
+    footer{
+        width: 80%;
+        font-size: 15px}
+    div, p, button{
+        font-size: 17px;}
+    th{
+        font-size: 15px;
+        max-width: 60%;
+        padding: 25px 5px;}}
 
 
 html,body{
@@ -178,7 +168,11 @@ hr{
     width: 90%;
     border-color: rgb(188, 173, 109);}
 button{
-    outline: none;}
+    outline: none;
+    background-color: rgb(221, 213, 184);
+    color: white;
+    font-size: 35px;
+    border-radius: 10px;}
 
 li{
     float: left;}
@@ -204,6 +198,7 @@ ul{
 
 <div class="toggle-container">
     <button class="toggle-button">&#9776;</button>
+    <img class="logoFW6Static" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo">
 </div>
 <ul id="Vollmenu">
     <li><a href="https://f11w6.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
@@ -231,13 +226,15 @@ ul{
 
 <div id="tageZaehler"></div>
 <br>
+<br><br>
+<div id="Zielende"></div>
+<br><br><br>
+<div id="MatheSA"></div>
+<br><br><br>
+<div id="DeutschSA"></div>
 <hr>
 <br><br>
-<div id="Zielende"> </div>
-<br>
-<hr>
-<br><br>
-<h2>Klickzähler</h2>
+<h2 style="color: rgb(188, 173, 109)">Klickzähler</h2>
 <button id="ClickB" onclick="addClick()">Klicken</button>
 <p id="counter">Klicks: 0</p>
 <br>
@@ -262,6 +259,14 @@ const vergangeneTage = Math.floor((heute - startDatum) / (1000 * 60 * 60 * 24));
 const Ende = new Date('2025-07-31');
 const Ziel = Math.floor((Ende - heute) / (1000 * 60 * 60 * 24));
     document.getElementById("Zielende").innerText = `Noch ${Ziel} Tage bis zu den Sommerferien`
+const matheSA = new Date('2025-01-10')
+const TageMatheSA = Math.floor((matheSA - heute) / (1000 * 60 * 60 * 24));
+document.getElementById("MatheSA").innerHTML = `Noch ${TageMatheSA} Tage bis Mathe Schulaufgabe (10.01.2024)`
+const deutschSA = new Date('2025-01-08')
+const TageDeutschSA = Math.floor((deutschSA - heute) / (1000 * 60 * 60 * 24));
+document.getElementById("DeutschSA").innerHTML = `Noch ${TageDeutschSA} Tage bis Deutsch Schulaufgabe (10.01.2024)`
+
+
 
 let count = 0;
 
