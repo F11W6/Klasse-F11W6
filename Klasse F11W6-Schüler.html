@@ -75,16 +75,16 @@
     position: fixed;
     background-color: rgb(81, 82, 83);
     animation: slideIn 0.5s ease-out forwards;}
-.navMenü {
+.navMenü{
     display: flex;
     align-items: center;
     background-color: rgb(221, 213, 184);
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     list-style-type: none;
     position: absolute;
     z-index: 10;
-    top: 0;
+    top: 0px;
     left: -100%;
     width: 100%;
     height: 100vh;
@@ -92,22 +92,44 @@
     justify-content: center;
     transition: 0.3s ease;}
 .navMenü li {
-    display: block;
+    display: inline-block;
     text-align: center;
-    padding: 20px;}
+    padding: 20px;
+    border: 1px solid rgb(188, 173, 109);
+    width: 100%;}
 .navMenü li a {
     color: #fff;
     font-size: 35px;
     text-decoration: none;
-    display: block;}
+    display: block;
+    height: 25vh;}
+#Vollmenu {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    background-color: rgb(221, 213, 184);
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    width: 100%;}
+#Vollmenu li {
+    list-style: none;
+    display: inline-block;}
+.logout-Container{
+    margin-left: auto;}
+.logout{
+    width: 53px;
+    height: 40px;
+    margin-top: -8px;
+    cursor: pointer;}
+.navMenü li:hover {
+    background-color: rgb(188, 173, 109);}
 .logout-Container {
     margin-left: auto;}
 .logout {
     width: 53px;
     height: 34px;
     cursor: pointer;}
-.navMenü li a:hover {
-    background-color: rgb(188, 173, 109);}
 .close-button {
     position: absolute;
     top: 20px;
@@ -149,6 +171,7 @@
     width: 90%; 
     margin: 0px auto;}
 
+
 @media (max-width: 1200px) {
     .slideContainer, .textContainer {
         width: 80%;}
@@ -157,55 +180,48 @@
     .toggle-button{
         display: none;}
     .nav-Menü{
-        display: block}}
+        display: block}
+th{
+    width: 50%;
+    padding: 50px 10px;
+    border-right: 2px solid rgb(188, 173, 109)}}
 
 @media (max-width: 768px) {
     .platzmacher {
         padding-top: 100px;
         padding-bottom: 100px;}
-    .slideContainer{
-        width: 100%;
-        top: 30px;
-        padding-top: 30px;
-        padding-bottom: 50px;}
-    .textContainer, .slideContainer{
-        margin: 0 auto;}
     #schließen{
         font-size: 20px;}
     #Satz{
         font-size: 27px;}
     #Vollmenu{
         display: none;}
-    #K11{
-        padding-bottom: 40px;}
     .navMenü {
         left: -100%;}
     .toggle-button {
         display: block;}
     .navMenü li a {
         font-size: 30px;
-        padding: 15px;
-        width: 100%;}
+        width: 100%;
+        height: 25vh;
+        max-height: 60px;}
     .logoFW6 {
         width: 50px;}
-    .logout {
-        width: 50px;
-        height: 35px;}
     .navMenü.active {
         left: 0;}
-    #CookiesText{
-        width: 0%;
-        font-size: 15px; 
-        margin: 0px auto}
-    .CookiesBlock{
-        width: 70%;}
-        .toggle-container {
+    .logoFW6Static{
+        position: absolute;
+        z-index: 1;
+        left: 5%;
+        top: 25px;
+        width: 70px;}
+    .toggle-container {
         display: block;
-        background-color: rgb(221, 213, 184);
+        background-color: rgb(202, 192, 148);
         padding: 10px;
         height: 60px;
         text-align: center;}
-    h1, h2{
+    h1, h2, h4{
         font-size: 20px;}
     h3{
         font-size: 15px;}
@@ -213,7 +229,11 @@
         width: 80%;
         font-size: 15px}
     div, p, button{
-        font-size: 17px;}}
+        font-size: 17px;}
+    th{
+        font-size: 15px;
+        max-width: 60%;
+        padding: 25px 5px;}}
 
 @media (max-width: 480px) {
     .logoFW6 {
@@ -226,7 +246,6 @@
         font-size: 24px;}
     .vor, .nach {
         display: none;}}
-
 
 @keyframes fade {
     from {opacity: 0;}
@@ -279,6 +298,18 @@ ul{
     overflow: hidden;
     padding: 0px;
     margin: 0px;}
+th{
+    width: 50%;
+    padding: 50px 10px;
+    border-right: 2px solid rgb(188, 173, 109)}
+tr{
+    border-bottom: 2px solid rgb(188, 173, 109);}
+table{
+    width: 80%;
+    position: flex;
+    left: 50%;
+    border-collapse: collapse;
+    justify-content: center};
 
 </style>
 
@@ -286,6 +317,7 @@ ul{
 
 <div class="toggle-container">
     <button class="toggle-button">&#9776;</button>
+    <img class="logoFW6Static" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo">
 </div>
 <ul id="Vollmenu">
     <li><a class="aktiv" href="https://f11w6.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
@@ -297,11 +329,10 @@ ul{
     
 <ul class="navMenü" id="nav-menu">
     <li><a href="https://f11w6.github.io/Klasse-F11W6/"> <img class="logoFW6" src="Bilder F11W6/F11W6 Lang.png" alt="Klassenlogo"> </a></li>
-    <li><a href="Klasse F11W6-Schüler.html">Schüler</a></li>
+    <li class="aktiv"><a href="Klasse F11W6-Schüler.html">Schüler</a></li>
     <li><a href="Klasse F11W6-Klassenfotos.html">Klassenfotos</a></li>
     <li><a href="Klasse F11W6-Ausflüge.html">Ausflüge</a></li>
     <li><a href="Klasse F11W6-Andere.html">Andere</a></li>
-    <li><span class="close-button">&times;</span></li>
 </ul>
     
 <h1>Sch&uuml;ler</h1>
@@ -314,9 +345,10 @@ ul{
 </Table>
 <br>
 <br>
+<hr>
 <br>
 <br>
-
+<p> (づ ᴗ _ᴗ)づ 🍍
 
 <hr>
 <footer>
@@ -330,8 +362,6 @@ const closeButton = document.querySelector('.close-button');
 toggleButton.addEventListener('click', () => {
     navMenu.classList.toggle('active');});
 
-closeButton.addEventListener('click', () => {
-    navMenu.classList.remove('active');});
 
 
 </script>
