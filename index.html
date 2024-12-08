@@ -525,7 +525,7 @@ let person = localStorage.getItem("username");
         document.getElementById("Willkommen").innerHTML = person; IstSchueler(person);}
     else{ DetectNoPerson()}}
 
-/* function IstSchueler(person){
+function IstSchueler(person){
     if (Schueler.includes(person)){html.style.visibility = "visible"}
     else{html.style.visibility = "hidden"
     alert("Zugriff verweigert: Du bist kein Schueler oder Lehrkraft der Klasse F11W6");
@@ -534,7 +534,7 @@ let person = localStorage.getItem("username");
 function DetectNoPerson() {
     if (!person || person === "0") { 
         html.style.visibility = "hidden";}}
-*/
+
 function SatzHallo() {
     SatzRandom = Saetze[Math.floor(Math.random() * Saetze.length)];
     document.getElementById("Satz").textContent = SatzRandom;}
