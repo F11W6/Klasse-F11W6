@@ -4,195 +4,9 @@
     <title>Klasse F11W6 Andere</title>
     <link rel="icon" href="Bilder F11W6/F11W6.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
-    <link rel="stylesheet" href="port.css"> 
+    <link rel="stylesheet" href="CSS/Andere.css">
 </head>
-<style>
-
-.platzmacher {
-    padding-top: 200px;
-    padding-bottom: 200px;}
-.logoFW6 {
-    width: 65px;
-    height: 31px;}
-.Hauptbild {
-    height: auto;
-    width: 80%;}
-.aktiv {
-    background-color: rgb(188, 173, 109);}
-
-
-.navMenü{
-    display: flex;
-    align-items: center;
-    background-color: rgb(221, 213, 184);
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100vh;
-    flex-direction: column;
-    transition: 0.3s ease;}
-.navMenü li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3.3vh;
-    border: 1px solid rgb(188, 173, 109);
-    height: 25vh;
-    width: 100vh;}
-.navMenü li a {
-    color: #fff;
-    font-size: 35px;
-    text-decoration: none;
-    display: block;
-    height: 20vh;
-    text-align: center;}
-.navMenü li:hover {
-    background-color: rgb(188, 173, 109);}
-#Vollmenu {
-    display: flex;
-    align-items: center;
-    background-color: rgb(221, 213, 184);
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    width: 100%;}
-#Vollmenu li {
-    list-style: none;
-    display: inline-block;}
-.toggle-button {
-    display: none;
-    position: absolute;
-    background-color: transparent;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    font-size: 30px;
-    color: #fff;
-    background: transparent;
-    border: none;
-    z-index: 1000;}
-.toggle-container {
-    display: none;}
-.navMenü.active {
-    left: 0;}
-#Bildkarte-klein{
-    display: none;}
-#counter{
-    color: rgb(188, 173, 109);
-}
-
-@media (max-width: 1200px) {
-    h1, h2 {
-        font-size: 30px;}
-    .toggle-button{
-        display: none;}
-    .nav-Menü{
-        display: block}}
-
-@media (max-width: 768px) {
-    .platzmacher {
-        padding-top: 100px;
-        padding-bottom: 100px;}
-    #Vollmenu{
-        display: none;}
-    .navMenü {
-        left: -100%;}
-    .toggle-button {
-        display: block;}
-    .navMenü li a {
-        font-size: 30px;
-        padding: 15px;
-        width: 100%;
-        height: 20vh;
-        max-height: 35px;}
-    .logoFW6 {
-        width: 50px;}
-    .navMenü.active {
-        left: 0;}
-    .logoFW6Static{
-        position: absolute;
-        z-index: 1;
-        left: 5%;
-        top: 25px;
-        width: 70px;}
-    .toggle-container {
-        display: block;
-        background-color: rgb(202, 192, 148);
-        padding: 10px;
-        height: 60px;
-        text-align: center;}
-    h1, h2, h4{
-        font-size: 25px !important;}
-    h3{
-        font-size: 15px;}
-    footer{
-        width: 80%;
-        font-size: 15px}
-    div, p, button{
-        font-size: 17px;}
-    th{
-        font-size: 15px;
-        max-width: 60%;
-        padding: 25px 5px;}}
-
-
-html,body{
-    overflow-x: hidden;}
-h1,h2,h3,h4,h5,h6{
-    font-size: 45px;}
-body{
-    background-color: rgb(50, 51, 52);
-    margin: 0;
-    color: white; 
-    text-align: center;
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;}
-img{
-    vertical-align: middle;
-    max-width: 100%;
-    height: auto;}
-
-footer{
-    background-color: rgb(188, 173, 109); 
-    padding: 5px; 
-    width: 100%; 
-    font-size: 20px;
-    position: absolute;}
-hr{
-    margin-top: 70px;
-    width: 90%;
-    border-color: rgb(188, 173, 109);}
-button{
-    outline: none;
-    background-color: rgb(221, 213, 184);
-    color: white;
-    font-size: 35px;
-    border-radius: 10px;}
-
-li{
-    float: left;}
-li a{ 
-    padding: 14px 16px;
-    display: block;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-size: 35px;}
-li a:hover{
-    background-color: rgb(188, 173, 109);}
-ul{
-    list-style-type: none; 
-    background-color: rgb(221, 213, 184);
-    overflow: hidden;
-    padding: 0px;
-    margin: 0px;}
-
-</style>
+<style></style>
 
 <body>
 
@@ -218,81 +32,68 @@ ul{
 
     
 <br>
-<br>
-<br>
-<h1>Andere</h1>
 
-<br><br>
+<h1 style="color: white;">Andere</h1>
 
-<div id="tageZaehler"></div>
-<br>
+<br><br><br>
+<div class="textContainer">
+Es sind <span id="tageZaehler" style="font-size: 28px; color: rgb(188, 173, 109);"> </span> Tage seit dem Schulstart vergangen!
 <br><br>
-<div id="Zielende"></div>
+Noch <span id="Zielende" style="font-size: 28px; color: rgb(188, 173, 109);"></span> Tage bis zu den Sommerferien
 <br><br><br>
-<div id="MatheSA"></div>
-<br><br><br>
-<div id="DeutschSA"></div>
+</div>
+
 <hr>
 <br><br>
-<h2 style="color: rgb(188, 173, 109)">Klickzähler</h2>
+<h2>Klickzähler</h2>
 <button id="ClickB" onclick="addClick()">Klicken</button>
 <p id="counter">Klicks: 0</p>
 <br>
 <p style="font-size: 45px;" id="SatzNummer">Klicke, um zu beginnen!</p>
-
-
-<div class="platzmacher"> </div>
-
-
+<br><br>
 <hr>
+<br>
+
+<h3>Mini-Games</h3>
+
+<table class="Tic-Tac-Toe">
+    <tr class="Tic-Tac-Reihe">
+        <th id="Bock1" class="Tic-Tac-Block">  </th>
+        <th id="Bock2" class="Tic-Tac-Block">  </th>
+        <th id="Bock3">  </th>
+    </tr>
+    <tr class="Tic-Tac-Reihe">
+        <th id="Bock4" class="Tic-Tac-Block">  </th>
+        <th id="Bock5" class="Tic-Tac-Block">  </th>
+        <th id="Bock6">  </th>
+    </tr>
+    <tr>
+        <th id="Bock7" class="Tic-Tac-Block">  </th>
+        <th id="Bock8" class="Tic-Tac-Block">  </th>
+        <th id="Bock9">  </th>
+    </tr>
+</table>
+<br><br>
+<button id="resetButton">Start</button>
+<br><br>
+<div id="message"></div>
+<br><br><br><br>
+
+
+<input type="text">
+
+
+<link rel="stylesheet" href="">
+
+<br><br><br>
+<hr>
+
 <footer>
     <p style="color: white; outline: none;">| Berufliche Oberschule Unterschleißheim | Südliche Ingolstädter Straße 1 | 85716 Unterschleißheim |</p>
 </footer>
 
 
-<script>
-
-const startDatum = new Date('2024-09-10');
-const heute = new Date();
-const vergangeneTage = Math.floor((heute - startDatum) / (1000 * 60 * 60 * 24));
-    document.getElementById('tageZaehler').innerText = `Es sind ${vergangeneTage} Tage seit dem Schulstart vergangen!`;
-const Ende = new Date('2025-07-31');
-const Ziel = Math.floor((Ende - heute) / (1000 * 60 * 60 * 24));
-    document.getElementById("Zielende").innerText = `Noch ${Ziel} Tage bis zu den Sommerferien`
-const matheSA = new Date('2025-01-10')
-const TageMatheSA = Math.floor((matheSA - heute) / (1000 * 60 * 60 * 24));
-document.getElementById("MatheSA").innerHTML = `Noch ${TageMatheSA} Tage bis Mathe Schulaufgabe (10.01.2024)`
-const deutschSA = new Date('2025-01-08')
-const TageDeutschSA = Math.floor((deutschSA - heute) / (1000 * 60 * 60 * 24));
-document.getElementById("DeutschSA").innerHTML = `Noch ${TageDeutschSA} Tage bis Deutsch Schulaufgabe (10.01.2024)`
-
-
-
-let count = 0;
-
-function addClick() {
-    count++; 
-    document.getElementById('counter').textContent = `Anzahl der Klicks: ${count}`;
-if (count===3){document.getElementById('SatzNummer').textContent = "Weiter so!"}
-else if (count===10){document.getElementById('SatzNummer').textContent = "Weiter weiter!"}
-else if (count===30){document.getElementById('SatzNummer').textContent = "Sieht gut aus!"}
-else if (count===100){document.getElementById('SatzNummer').textContent = "Unglaublich..."}
-else if (count===200){document.getElementById('SatzNummer').textContent = "Als ob du immer noch da bist!"}
-
-else{document.getElementById("SatzNummer").textContent = "Weiter so!"}}
-
-
-
-const toggleButton = document.querySelector('.toggle-button');
-const navMenu = document.getElementById('nav-menu');
-const closeButton = document.querySelector('.close-button');
-toggleButton.addEventListener('click', () => {
-    navMenu.classList.toggle('active');});
-
-closeButton.addEventListener('click', () => {
-    navMenu.classList.remove('active');});
-
-</script>
+<script src="JavaScript/Andere.js"></script>
 
 </body>
 </html>
