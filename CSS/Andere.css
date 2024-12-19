@@ -102,6 +102,39 @@
 #counter{
     color: rgb(188, 173, 109);}
 
+#gameArea {
+    margin: auto;
+    position: relative;
+    width: 900px;
+    height: 600px;
+    background-color: white;
+    border: 4px solid rgb(188, 173, 109);
+    overflow: hidden;}
+
+#ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color:rgb(50, 51, 52);
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);}
+
+#paddle {
+    position: absolute;
+    bottom: 10px;
+    width: 120px;
+    height: 20px;
+    background-color: rgb(188, 173, 109) /*mediumspringgreen*/;
+    left: 50%;
+    transform: translateX(0%);}
+
+#score {
+    margin-top: 20px;
+    font-size: 24px;}
+
+
 @media (max-width: 1200px) {
     h1, h2 {
         font-size: 30px;}
@@ -171,7 +204,8 @@
 html,body{
     overflow-x: hidden;}
 h1,h2,h3,h4,h5,h6{
-    font-size: 45px;}
+    font-size: 45px;
+color: rgb(188, 173, 109);}
 body{
     background-color: rgb(50, 51, 52);
     margin: 0;
