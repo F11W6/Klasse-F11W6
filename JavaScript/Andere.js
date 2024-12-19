@@ -10,7 +10,77 @@ let currentPlayer = "X";
 let count = 0;
 
 
+const ball = document.getElementById("ball");
+const paddle = document.getElementById("paddle");
+const gameArea = document.getElementById("gameArea");
+const scoreDisplay = document.getElementById("score");
 
+let ballX = gameArea.offsetWidth / 2 - ball.offsetWidth / 2;
+let ballY = 0;
+let ballSpeedX = 2;
+let ballSpeedY = 3;
+let paddleX = gameArea.offsetWidth / 2 - paddle.offsetWidth / 2;
+let paddleSpeed = 20;
+let score = 0;
+let isGameOver = false;
+let gameLoop;
+
+function moveBall() {
+    ballX += ballSpeedX;
+    ballY += ballSpeedY;
+
+    if (ballX <= 0 || ballX + ball.offsetWidth >= gameArea.offsetWidth) {
+        ballSpeedX = -ballSpeedX;}
+    if (ballY <= 0) {
+        ballSpeedY = -ballSpeedY;}
+    if (
+        ballY + ball.offsetHeight >= gameArea.offsetHeight - paddle.offsetHeight &&
+        ballX + ball.offsetWidth >= paddleX &&
+        ballX <= paddleX + paddle.offsetWidth) {
+        ballSpeedY = -ballSpeedY;
+        score++;
+        scoreDisplay.textContent = "Score: " + score;}
+    if (ballY + ball.offsetHeight >= gameArea.offsetHeight) {
+        isGameOver = true;
+        clearInterval(gameLoop);
+        document.getElementById("Over").textContent = "Game Over! Dein Score: " + score;}
+
+    ball.style.left = ballX + "px";
+    ball.style.top = ballY + "px";}
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "ArrowLeft") {
+        paddleX -= paddleSpeed;
+        if (paddleX < 0) paddleX = 0;
+    } else if (event.key === "ArrowRight") {
+        paddleX += paddleSpeed;
+        if (paddleX + paddle.offsetWidth > gameArea.offsetWidth) {
+            paddleX = gameArea.offsetWidth - paddle.offsetWidth;}}
+    paddle.style.left = paddleX + "px";});
+
+function StartGameBall() {
+    if (isGameOver) {
+        resetGameBall();}
+    gameLoop = setInterval(moveBall, 10);}
+
+function resetGameBall() {
+    ballX = gameArea.offsetWidth / 2 - ball.offsetWidth / 2;
+    ballY = 0;
+    ballSpeedX = 2;
+    ballSpeedY = 3;
+    score = 0;
+    scoreDisplay.textContent = "Score: " + score;
+    document.getElementById("Over").innerHTML = " ";
+    isGameOver = false;
+    paddleX = gameArea.offsetWidth / 2 - paddle.offsetWidth / 2;
+    paddle.style.left = paddleX + "px";
+    clearInterval(gameLoop);
+    ball.style.left = ballX + "px";
+    ball.style.top = ballY + "px";}
+
+document.getElementById("StarteBall").addEventListener("click", function () {StartGameBall();});
+
+ 
 
 function addClick() {
     count++; 
@@ -77,3 +147,7 @@ toggleButton.addEventListener('click', () => {
 
 closeButton.addEventListener('click', () => {
     navMenu.classList.remove('active');});
+
+
+window.onload = function(){
+    FrageWechsel()}
